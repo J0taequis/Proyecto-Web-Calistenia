@@ -10,6 +10,7 @@
 
     <title>Proyecto Desarrollo Web</title>
     <link rel="stylesheet" href="style.css">
+    <script src="codigo.js"></script>
 </head>
 
 
@@ -17,7 +18,7 @@
 
     <header>
         <nav class="gridul">
-            <img src="frontlever.png" alt="">
+            <img id="imagen1" src="frontlever.png" alt="">
             <ul class="gridlistas">
                 <li>Inicio</li>
                 <li>Productos y Servicios</li>
@@ -72,12 +73,12 @@
                 </tr>
         </table>
         <div>
-            <form class="gridform">
-                <input type="text" name="nombre">
+            <form class="gridform" onsubmit="muestraDatos()">
+                <input id="form1" type="text" name="nombre">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="correo">
+                <input id="form2" type="text" name="correo">
                 <label for="correo">Correo</label>
-                <input type="text" name="mensaje">
+                <input id="form3" type="text" name="mensaje">
                 <label for="mensaje">Mensaje</label>
                 <input type="submit" name="enviar" value="Enviar">
             </form>
@@ -85,7 +86,6 @@
     </main>
 
     <footer></footer>
-    
 </body>
 
 

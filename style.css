@@ -1,3 +1,6 @@
+body {
+    background-color: gray;
+}
 .gridul {
     display: grid;
     grid-template-columns: auto;

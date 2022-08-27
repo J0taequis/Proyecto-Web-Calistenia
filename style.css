@@ -1,73 +1,158 @@
-body {
-    background-color: gray;
-}
-.gridul {
+#grid-container {
     display: grid;
-    grid-template-columns: auto;
-    background-color: green;
-    padding: 0;
-    margin: 0;
-    height: 60px;
-}
-.gridlistas {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px;
-    grid-column: 2;
-    padding: 0;
-    margin: 0;
+    grid-template-areas:
+    "header header header"
+    "main main aside"
+    "main main aside"
+    "footer footer footer";
+    grid-template-rows: 100px auto auto 100px;
+    grid-template-columns: 30% 30% auto;
+    height: 100vh;
+    gap: 1em;
 }
 
-ul.gridlistas li {
-    padding-bottom: 2rem;
-    border: solid black 2px;
-    border-radius: 30px;
-    text-align: center;
+#header {
+    grid-area: header;
+    background-color: #24303c;
+    border-radius: 4px;
+}
+
+#main {
+    grid-area: main;
+    background-color: #24303c;
+
+    display: grid;
+    grid-template-areas:
+    "div div"
+    "article article"
+    "article article";
+    grid-template-rows: 100px auto auto;
+    gap: 1em;
+    border-radius: 4px;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #24303c;
+    border-radius: 4px;
+}
+
+#divm {
+    grid-area: div;
+    background-color: #24303c;
+    border-radius: 4px;
+}
+
+#article {
+    grid-area: article;
+    background-color: #24303c;
+    border-radius: 4px;
+}
+
+#aside {
+    grid-area: aside;
+    background-color: #24303c;
+    border-radius: 4px;
+}
+
+/* ---------------------- Contenido del header y listas ---------------------- */
+
+#navegation ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.gridform {
-    display: grid;
-    grid-template-columns: 25%;
-    background-color: aquamarine;
+#menu > li {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
 }
 
-img {
-    border-radius: 200px;
-    width: 50px;
-    height: 50px;
-    align-self: center;
-    padding: 5px;
+#menu > li > a {
+    background-color: #fff;
+    display: block;
+    padding: 15px 30px;
+    color: #353535;
+    text-decoration: none;
+    font-family: 'Open sans';
 }
 
-
-#elache {
-    font-size: 30px;
-    color: yellow;
-    background-color:black;
-    width: 130px;
-    text-align: center;
+#menu li a:hover {
+    color: coral;
+    transition: all .3s
 }
 
-#primerp {
-    font-size: 20px;
-    color: orange;
-    background-color: aqua;
-    width: 500px;
+#submenu {
+    position: absolute;
+    background: #333333;
+    width: 66.7%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
 }
 
-#segundop {
-    font-size: 20px;
-    color: orange;
-    background-color: aqua;
-    width: 500px;
+#submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open sans';
 }
 
-b {
-    color: blueviolet;
+#menu li:hover #submenu {
+    visibility: visible;
+    opacity: 1;
 }
 
-table {
-    background-color: red;
+/* ---------------------- Secciones de los articulos ---------------------- */
+
+#PyS, #QS, #H, #Eq, #Contact {
+    display: none;
+}
+
+#h1M {
+    color: coral;
+    padding: 20px;
+}
+
+section h1 {
+    padding: 20px;
+}
+/* ---------------------- Imágenes ---------------------- */
+
+/* ---------------------- Tabla ---------------------- */
+
+.tabla {
+    border: solid 2px lightslategray;
+    margin: 20px;
+}
+
+thead {
+    background: lightslategray;
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px;
+    background: lightslategray;
+}
+
+/* ---------------------- Formulario ---------------------- */
+
+.formulario {
+    background: lightslategray;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+#form1, #form2, #form3, #submit {
+    padding: 10px;
+    border: solid 2px #1f53c5;
 }

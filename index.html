@@ -11,9 +11,9 @@
 <body id="grid-container" >
     <header id="header">
         <nav id="navegation">
-            <img id="imagen1" src="frontlever.png" alt="">
+            <img id="imagen1" src="/Imágenes/frontlever.png" alt="">
             <ul id="menu">
-                <li onclick="mostrarcontenido(listaul[0], 'Calistenia')"><a href="#">Inicio / Home</a> </li>
+                <li onclick="mostrarcontenido(listaul[0], 'Calistenia')"><a href="#">Inicio / Home</a></li>
 
                 <li onclick="mostrarcontenido(listaul[1], 'Productos y Servicios')"><a href="#">Productos y Servicios</a> </li>
 
@@ -29,12 +29,22 @@
         </nav>
     </header>
     <main id="main">
-        <div id="divM">
-            <h1 id="h1M">Calistenia</h1>
-        </div>
-        <article id="article">
+        <h1 id="h1M">Calistenia</h1>
+        <article id="article" aria-label="article">
             <section id="IH">
-                <h2 id="h1IH">inicio/home</h2>
+                <h2>¿Qué es la calistenia?</h2>
+                <p class="p1IH">
+                    Calistenia es una palabra que procede del griego <i>Kallos</i>, belleza, 
+                    y <i>sthenos</i>, fortaleza.<br>Se trata de un sistema de ejercicios
+                    basado en el peso del <b>propio cuerpo</b> y que trabaja grandes 
+                    grupos musculares para alcanzar la belleza del cuerpo en movimiento.
+                </p>
+                <p class="p2IH">
+                    Te invitamos a ver el siguiente video creado por <b>Andrea Larosa</b>,
+                    un calistenico de elite. 
+                    <a href="https://www.youtube.com/watch?v=z75yHDA29AI&ab_channel=AndreaLarosaOfficial">AndreaLarosaOfficial</a>
+                </p>
+                <h2>Algunos ejercicios:</h2>
                 <table class="tabla">
                     <thead>
                         <tr>
@@ -91,3 +101,6 @@
     <footer id="footer"></footer>
 </body>
 </html>
+
+
+

@@ -23,7 +23,7 @@
 
     display: grid;
     grid-template-areas:
-    "div div"
+    "h1M h1M"
     "article article"
     "article article";
     grid-template-rows: 100px auto auto;
@@ -37,10 +37,13 @@
     border-radius: 4px;
 }
 
-#divm {
-    grid-area: div;
+#h1M {
+    grid-area: h1M;
     background-color: #24303c;
     border-radius: 4px;
+    margin: 0;
+    color: coral;
+    padding: 20px;
 }
 
 #article {
@@ -112,15 +115,22 @@
     display: none;
 }
 
-#h1M {
-    color: coral;
+section h2 {
     padding: 20px;
+    color: coral;
 }
 
-section h1 {
+/* ---------------------- Seccion/Inicio/Home ---------------------- */
+
+.p1IH, .p2IH {
+    margin: 0;
     padding: 20px;
+    font-family: 'Open sans';
+    font-size: 20px;
+    color: #fff;
 }
 /* ---------------------- Imágenes ---------------------- */
+
 #imagen1 {
     width: 50px;
     height: 50px;
@@ -129,6 +139,7 @@ section h1 {
     display: block;
     padding: 10px;
 }
+
 /* ---------------------- Tabla ---------------------- */
 
 .tabla {

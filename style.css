@@ -80,6 +80,7 @@
     color: #353535;
     text-decoration: none;
     font-family: 'Open sans';
+    border-radius: 4px;
 }
 
 #menu li a:hover {
@@ -111,7 +112,7 @@
 
 /* ---------------------- Secciones de los articulos ---------------------- */
 
-#PyS, #QS, #H, #Eq, #Contact {
+#PyS, #H, #Eq, #Contact {
     display: none;
 }
 
@@ -120,9 +121,14 @@ section h2 {
     color: coral;
 }
 
+h3 {
+    padding: 20px;
+    color: coral;
+}
+
 /* ---------------------- Seccion/Inicio/Home ---------------------- */
 
-.p1IH, .p2IH {
+p {
     margin: 0;
     padding: 20px;
     font-family: 'Open sans';

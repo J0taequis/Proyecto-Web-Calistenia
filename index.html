@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto Desarrollo Web Hecho por Sion Arancibia y Eduardo Jaramillo">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Proyect</title>
 </head>
@@ -18,12 +19,12 @@
 
                 <li><a id="dropbtn" href="#">Quienes Somos</a>
                     <ul id="submenu">
-                        <li onclick="mostrarcontenido(listaul[3], 'Historia')"><a href="#">Historia</a></li>
-                        <li onclick="mostrarcontenido(listaul[4], 'Equipo')"><a href="#">Equipo</a></li>
+                        <li onclick="mostrarcontenido(listaul[2], 'Historia')"><a href="#">Historia</a></li>
+                        <li onclick="mostrarcontenido(listaul[3], 'Equipo')"><a href="#">Equipo</a></li>
                     </ul>
                 </li>
 
-                <li onclick="mostrarcontenido(listaul[5], 'Contacto')"><a href="#">Contacto</a> </li>
+                <li onclick="mostrarcontenido(listaul[4], 'Contacto')"><a href="#">Contacto</a> </li>
             </ul>
         </nav>
     </header>
@@ -72,19 +73,35 @@
                 </table>
             </section>
             <section id="PyS">
-                <h2>PyS</h2>
-            </section>
-            <section id="QS">
-                <h2>QS</h2>
+                <h2>Productos y Servicios</h2>
+                <p>
+                    Nos encargamos de ofrecer el equipamiento necesario para los aventurados en esta disciplina, podemos mencionar los siguientes: bandas elásticas, anillas, barras paralelas, barras para flexiones, barras para dominadas, muñequeras, magnesio deportivo, etc.
+                </p>
+                <p>
+                    Ofrecemos los siguientes servicios: instalación personalizada de parques para calistenia, envíos gratuitos dentro de Temuco, asesorías y planes de entrenamiento.
+                </p>
             </section>
             <section id="H">
                 <h2>Historia</h2>
+                <p>
+                    Los cimientos de esta empresa se dan en la Universidad Católica de Temuco, cuando dos estudiantes de ingeniería se dan cuenta de la escasez de lugares donde practicar calistenia. Ellos junto a sus amigos deciden crear un grupo de calistenia, en el cual se motivan, apoyan y comparten. Este grupo iba escalando en todo aspecto, es así como surge la idea de crear una empresa, enfocada en expandir esta hermosa disciplina.
+                </p>
             </section>
             <section id="Eq">
-                <h2>Equipo</h2>
+                <h3>Sion Arancibia</h3>
+                <p>
+                    Nacido en Chile en el año 2003. Es el fundador de la empresa, encargado del marketing, también desempeña sus funciones como desarrollador web en la misma, estudiante de ingeniería civil informática UCT. Apasionado por la calistenia y su labor como programador.
+                </p>
+                <h3>Eduardo Jaramillo</h3>
+                <p>
+                    Nacido en Chile en el año 2003. Es cofundador de la empresa, encargado del área de finanzas y producción, también desempeña sus funciones como desarrollador web en la misma, estudiante de ingeniería civil informática UCT. Apasionado por la calistenia y su labor como programador.
+                </p>
             </section>
             <section id="Contact">
                 <h2>Contacto</h2>
+                <p>
+                    Si quieres establecer contacto con nuestro personal, por favor rellene los siguientes campos y pulse en enviar.
+                </p>
                 <div id="container-form">
                     <form class="formulario" onsubmit="muestraDatos()">
                         <input id="form1" type="text" name="nombre" placeholder="Ingresa tu nombre">

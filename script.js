@@ -1,4 +1,4 @@
-var listaul = ["IH", "PyS", "QS", "H", "Eq", "Contact"];
+var listaul = ["IH", "PyS", "H", "Eq", "Contact"];
 
 function mostrarcontenido(a, text) {
     document.getElementById(a).style.display = "block";

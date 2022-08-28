@@ -16,9 +16,9 @@ function muestraDatos(){
     const form1 = document.getElementById('form1').value;
     const form2 = document.getElementById('form2').value;
     const form3 = document.getElementById('form3').value;
-    alert(form1);
-    alert(form2);
-    alert(form3);
+    alert("Su nombre es: "+form1);
+    alert("Su correo es: "+form2);
+    alert("El mensaje es: "+form3);
 }
 
 // evento asociado al mouse (click en la imagen)

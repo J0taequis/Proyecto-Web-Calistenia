@@ -20,3 +20,21 @@ function muestraDatos(){
     alert(form2);
     alert(form3);
 }
+
+// evento asociado al mouse (click en la imagen)
+
+const imagen = document.getElementById('imagen1');
+let clickeado = true;
+
+imagen.addEventListener("click", event=> {
+    if(clickeado){
+        imagen.style.width="40px";
+        imagen.style.height="40px";
+        clickeado=false;
+    }
+    else{
+        imagen.style.width="50px";
+        imagen.style.height="50px";
+        clickeado=true;
+    }
+});

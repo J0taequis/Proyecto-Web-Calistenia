@@ -2,17 +2,14 @@ var listaul = ["IH", "PyS", "QS", "H", "Eq", "Contact"];
 
 function mostrarcontenido(a, text) {
     document.getElementById(a).style.display = "block";
-    document.getElementById("h1M").innerHTML = text
+    document.getElementById("h1M").innerHTML = text;
 
     // para ocultar los que no queremos
     for(let i=0; i < listaul.length; i++){
-        if(listaul[i] == a){
-            i++;
+        if(listaul[i] != a){
+            document.getElementById(listaul[i]).style.display = "none";
         }
-        else{
-            document.getElementById(listaul[i]).style.display = "none"
-        }
-    }
+    }  
 }
 
 function muestraDatos(){

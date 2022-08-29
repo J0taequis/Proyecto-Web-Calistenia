@@ -1,3 +1,4 @@
+//lista de id de las secciones
 var listaul = ["IH", "PyS", "H", "Eq", "Contact"];
 
 function mostrarcontenido(a, text) {

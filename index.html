@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="NOINDEX">
     <meta name="description" content="Proyecto Desarrollo Web Hecho por Sion Arancibia y Eduardo Jaramillo">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Proyect</title>
+    <title>Proyecto de calistenia</title>
 </head>
+<!--Cuerpo de la página-->
 <body id="grid-container" >
+    <!--Barra de navegación-->
     <header id="header">
         <nav id="navegation">
             <img id="imagen1" src="/Imágenes/frontlever.png" alt="">
@@ -28,6 +31,7 @@
             </ul>
         </nav>
     </header>
+    <!--Contenido general de la página-->
     <main id="main">
         <h1 id="h1M">Calistenia</h1>
         <article id="article" aria-label="article">
@@ -44,6 +48,7 @@
                     un calistenico de elite. 
                     <a href="https://www.youtube.com/watch?v=z75yHDA29AI&ab_channel=AndreaLarosaOfficial">AndreaLarosaOfficial</a>
                 </p>
+                <!--Tabla de ejercicios calistenia-->
                 <h2>Algunos ejercicios:</h2>
                 <table class="tabla">
                     <thead>
@@ -102,6 +107,7 @@
                 <p>
                     Si quieres establecer contacto con nuestro personal, por favor rellene los siguientes campos y pulse en enviar.
                 </p>
+                <!--Formulario para enviar datos-->
                 <div id="container-form">
                     <form class="formulario" onsubmit="muestraDatos()">
                         <input id="form1" type="text" name="nombre" placeholder="Ingresa tu nombre">
@@ -113,8 +119,9 @@
             </section>
         </article>
     </main>
-    <aside id="aside"></aside>
-    <footer id="footer"></footer>
+    <aside id="aside">Aside</aside>
+    <footer id="footer">Copyright 2022</footer>
+    <!--Script de javascript al final del body-->
     <script src="script.js"></script>
 </body>
 </html>

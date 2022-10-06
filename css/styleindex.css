@@ -15,7 +15,55 @@ body{
 
 /*menu de navegacion*/
 
-.ul-flex-row{  /*nav en flexbox fila*/
+nav {
+
+    margin: auto;
+    font-size : 20px;
+
+}
+
+.ul-flex-row {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content : flex-end;
+}
+
+.ul-flex-row > li > a {
+    display: block;
+    padding: 15px 20px;
+    color:#fff;
+    text-decoration: none;
+}
+
+.ul-flex-row > li:hover {
+    background-color:aquamarine;
+}
+
+.ul-dropdown {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.ul-flex-row li:hover .ul-dropdown {
+    display: block;
+}
+
+.ul-dropdown li:hover {
+    background-color: black;
+}
+
+.ul-dropdown li a {
+    display: block;
+    color: #fff;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+/* .ul-flex-row{  /*nav en flexbox fila
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -43,7 +91,7 @@ li > ul > li {
 a{
     text-decoration: none;
     color: white;
-}
+} */
 
 /*Secciones, slider de imagenes*/
 

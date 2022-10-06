@@ -12,52 +12,222 @@ body{
     background-size: cover;
 }
 
+/* Centro de la página (main) */
+
+main {
+    height: 100vh;
+}
 
 /*menu de navegacion*/
 
-.ul-flex-row{  /*nav en flexbox fila*/
+#login-button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    margin-left: 50px;
+    width: 85px;
+    height: 85px;
+    background-color: transparent;
+    border: none;
+}
+
+#header-nav {
+    position: relative;
+    width: 100%;
+    min-width: 900px;
+    padding: 6px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 30px;
+    justify-content : space-between;
+    align-items: center;
+    background-color: #24252A;
+    z-index: 10;
 }
 
-li {
-    list-style: none;
+
+.ul-flex-row {
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    position: absolute;
 }
 
-.ul-flex-row > li { 
-    margin-right: 80px;
-    color: white;
-}
-
-#li-login {
-    margin-right: 570px;
-}
-
-li > ul > li {
-    text-align: center;
-    padding-top: 5px;
-}
-
-a{
+a {
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
+
+#header-nav  li {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+#header-nav li:hover {
+    background-color: #004d40;
+}
+
+.ul-dropdown {
+    position: absolute;
+    display: none;
+    transform: translateY(20px);
+}
+
+.ul-dropdown > li {
+    border-bottom: solid 1px #fff;
+    text-align: center;
+    background-color: #757575;
+    padding: 20px;
+    width: 190px;
+    transform: translateX(-20px);
+}
+
+.ul-dropdown > li:hover {
+    background-color: aquamarine;
+}
+
+.QS:hover > .ul-dropdown {
+    display: block;
+}
+
+
+/* Sistema de login y registro */
+
+#Close-pop-up {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    background-color: #fff;
+}
+
+#form-box::backdrop {
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(2px);
+}
+#form-box {
+    width: 370px;
+    height: 455px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-area: section1;
+}
+
+.button-box {
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #e0e0e0;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 22px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#selector {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(63, 81, 181, 0.7), rgba(0, 188, 212, 0.7) );
+    border-radius: 30px;
+    transition: 0.8s;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #004d40;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    background: linear-gradient(to right, rgba(63, 81, 181, 0.7), rgba(0, 188, 212, 0.7));
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+span {
+    color: #757575;
+    font-size: 12px;
+    bottom: 64px;
+    position: absolute;
+}
+
+#login-form {
+    left: 50px;
+}
+
+#register-form {
+    left: 450px;
+}
+
+
 
 /*footer*/
 
+#footer-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #24252A;
+}
+
 
 .footer-ul {
-
+    right: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 30px;
-    margin-top: 50px;
-    margin-bottom:50px ;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 50px;
 }
 
 .footer-ul > li {
-    margin-right: 80px;
+    list-style: none;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+
+.footer-ul li:hover {
+    background-color: #004d40;
 }

@@ -12,13 +12,13 @@
     <!--Barra de navegación-->
 
     <header>
-        <nav>
+        <nav id="header-nav">
+            <button type="button" id="login-button">Iniciar sesión</button>
             <ul class="ul-flex-row">
-                <li id="li-login">Iniciar Sesion</a></li>
                 <li><a href="index.html">Inicio / Home</a></li>
                 <li><a href="parques.html">Buscar Parques</a> </li>
                 <li><a href="ejercicios.html">Ejercicios</a> </li>
-                <li><a>Quienes Somos</a>
+                <li class="QS"><a>Quienes Somos</a>
                     <ul class="ul-dropdown">
                         <li><a href="historia.html">Historia</a></li>
                         <li><a href="equipo.html">Equipo</a></li>
@@ -35,7 +35,28 @@
     <!--Contenido general de la página-->
     <main>
         <article aria-label="article">
-            <section id="H">
+            <dialog id="form-box">
+                <button type="button" id="Close-pop-up" aria-label="Close">X</button>
+                <div class="button-box">
+                    <div id="selector"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Registrarse</button>
+                </div>
+                <form id="login-form" action="" class="input-group" method="dialog">
+                    <input type="text" class="input-field" placeholder="Nombre de usuario" required>
+                    <input type="password" class="input-field" placeholder="contraseña" required>
+                    <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
+                    <button type="submit" class="submit-btn">Acceder</button>
+                </form>
+                <form id="register-form" action="" class="input-group" method="dialog">
+                    <input type="text" class="input-field" placeholder="Nombre de usuario" required>
+                    <input type="email" class="input-field" placeholder="Correo" required>
+                    <input type="password" class="input-field" placeholder="contraseña" required>
+                    <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
+                    <button type="submit" class="submit-btn">Registrarse</button>
+                </form>
+            </dialog>
+            <section id="Historia">
                 <h2>Historia</h2>
                 <p>
                     Los cimientos de esta empresa se dan en la Universidad Católica de Temuco, cuando dos estudiantes de ingeniería se dan cuenta de la escasez de lugares donde practicar calistenia. Ellos junto a sus amigos deciden crear un grupo de calistenia, en el cual se motivan, apoyan y comparten. Este grupo iba escalando en todo aspecto, es así como surge la idea de crear una empresa, enfocada en expandir esta hermosa disciplina.
@@ -48,20 +69,18 @@
 
     <!--footer de la página-->
     <footer>
-        <nav>
+        <nav id="footer-nav">
             <ul class="footer-ul">
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a> </li>
-                <li><a href="contacto.html"></a>contacto</li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="contacto.html">contacto</a></li>
             </ul>
         </nav>
     </footer>
 
 
     <!--Script de javascript al final del body-->
-
-
-
+    <script src="js/script.js"></script>
 </body>
 </html>

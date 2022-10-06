@@ -16,9 +16,7 @@
     <!--Barra de navegación-->
 
     <header>
-        <div class="login-content">
-            <a id="login-content-button">Iniciar Sesion</a>
-        </div>
+        <button type="button" id="login-button">Iniciar sesión</button>
         <nav>
             <ul class="ul-flex-row">
                 <li><a href="index.html">Inicio / Home</a></li>
@@ -39,14 +37,34 @@
     <!--Contenido general de la página-->
     <main>
         <article aria-label="article">
+            <section>
+                <dialog id="form-box">
+                    <button type="button" id="Close-pop-up" aria-label="Close">X</button>
+                    <div class="button-box">
+                        <div id="selector"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Registrarse</button>
+                    </div>
+                    <form id="login-form" action="" class="input-group" method="dialog">
+                        <input type="text" class="input-field" placeholder="Nombre de usuario" required>
+                        <input type="password" class="input-field" placeholder="contraseña" required>
+                        <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
+                        <button type="submit" class="submit-btn">Acceder</button>
+                    </form>
+                    <form id="register-form" action="" class="input-group" method="dialog">
+                        <input type="text" class="input-field" placeholder="Nombre de usuario" required>
+                        <input type="email" class="input-field" placeholder="Correo" required>
+                        <input type="password" class="input-field" placeholder="contraseña" required>
+                        <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
+                        <button type="submit" class="submit-btn">Registrarse</button>
+                    </form>
+                </dialog>
+            </section>
             <section class="banner">
                 <div class="banner-content">
                     <h1>Bienvenidos a la calistenia</h1>
                     <a href="#">Ver artículos</a>
                 </div>
-            </section>
-            <section>
-
             </section>
             <section>
 
@@ -70,7 +88,7 @@
 
 
     <!--Script de javascript al final del body-->
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 

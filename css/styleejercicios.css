@@ -45,6 +45,85 @@ a{
     color: white;
 }
 
+
+/*main*/
+
+.main-div { /*Contenedor principal en grid (divide el main en: lista de ejercicios - ejercicio seleccionado )*/
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/* Lado de los filtros en main*/
+
+.filter { /* div que ocupa la primera columna (30%) del grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 70px;
+    grid-column: 1/2;
+}
+
+.ul-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+    padding-bottom: 50px; /*evita que los distintas clases de ejercicios se junten*/
+}
+
+.ul-filter > li {
+    font-size: 20px;
+}
+
+
+/* Lado de los Ejercicios en main */
+
+
+.workout{ /* div que ocupa la segunda columna (70%) del grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 140px;
+    grid-column: 2/3;
+}
+
+.grid-div-workout { /* div que guarda la imagen y la descripción del ejercicio*/
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+
+.workout-img { /*contenedor de la imagen*/
+    width: 400px;
+    height: 400px;
+    grid-column: 1/2;
+}
+
+img { /*la imagen dentro del contenedor*/
+    width: 400px;
+    height: 400px;
+}
+
+.workout-description{ /*contenedor de la descripcion*/
+    width: 600px;
+    height: 400px;
+    grid-column: 2/3;
+}
+
+p {
+    max-width: 500px; /*tamaño maximo del parrafo*/
+    padding-left: 30px; /*alejar un poco de la imagen*/
+}
+
+
+
+
+
+
+
+
+
 /*footer*/
 
 

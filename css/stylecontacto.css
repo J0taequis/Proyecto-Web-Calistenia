@@ -45,6 +45,98 @@ a{
     color: white;
 }
 
+
+
+/*main*/
+
+
+.main-div { /*Contenedor principal en grid (divide el main en: lista de ejercicios - ejercicio seleccionado )*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+/* Lado del formulario en main*/
+
+
+.form-div, form { /* div y formulario que ocupa la primera columna (50%) del grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    grid-column: 1/2;
+}
+
+label, input, select { /*globales de ancho y alto*/
+    width: 500px;
+    height: 30px;
+}
+
+label {
+    padding-top: 10px; 
+    font-size: 20px;
+}
+
+#submit { /*boton de submit*/
+    background-color: aquamarine;
+}
+
+textarea { /*area del mensaje*/
+    margin-bottom: 10px;
+    width: 500px;
+    height: 300px;
+}
+
+
+
+
+/* Lado de la info  en main*/
+
+
+.text-info-div{ /* div que ocupa la segunda columna (50%) del grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 40px;
+    grid-column: 2/3;
+}
+
+.grid-text-info { /*div que separa texto de como usar el formulario / datos del usuario respecto del correo ingresado  */
+    display: grid;
+    grid-template-rows: 250px 250px;
+}
+
+.text-div {
+    margin-top: 50px;
+    grid-row: 1/2;
+}
+
+.text-div > ul > li {
+    padding-top: 30px;
+    font-size: 25px;
+    list-style: square;
+}
+
+
+/*muestra de datos dependiendo del correo en main*/
+
+
+.user-info {
+    grid-row: 2/3;
+}
+
+.user-info > ul > li {
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+
+
 /*footer*/
 
 

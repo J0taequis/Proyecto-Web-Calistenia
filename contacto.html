@@ -33,23 +33,46 @@
 
     <!--Contenido general de la página-->
     <main>
-        <article aria-label="article">
-            <section id="Contact">
-                <h2>Contacto</h2>
-                <p>
-                    Si quieres establecer contacto con nuestro personal, por favor rellene los siguientes campos y pulse en enviar.
-                </p>
-                <!--Formulario para enviar datos-->
-                <div id="container-form">
-                    <form class="formulario" onsubmit="muestraDatos()">
-                        <input id="form1" type="text" name="nombre" placeholder="Ingresa tu nombre">
-                        <input id="form2" type="email" name="correo" placeholder="Ingresa tu correo">
-                        <input id="form3" type="text" name="mensaje" placeholder="Ingresa un mensaje">
-                        <input id="submit" type="submit" name="enviar" value="Enviar">
-                    </form>
+        <div class="main-div">
+            <div class="form-div">
+                <form action="">
+                    <label for="form-email">Correo electronico</label>
+                    <input id="form-email" name="form-email" type="email" required>
+                    <label for="select-option">Motivo del mensaje</label>
+                    <select name="" id="select-option">
+                        <option value="">Reportar Bug</option>
+                        <option value="">Reportar Usuario</option>
+                        <option value="">Sugerencia</option>
+                        <option value="">Otro</option>
+                    </select>
+                    <label for="message">Escribe tu mensaje</label>
+                    <textarea name="" id="message"></textarea>
+                    <input type="submit" name="" id="submit">
+                </form>
+            </div>
+
+            <div class="text-info-div">
+                <div class="grid-text-info">
+                    <div class="text-div">
+                        <ul>
+                            <li>Ingresa un correo que esté registrado en esta página</li>
+                            <li>Si tu correo está registrado se mostrarán los datos abajo</li>
+                        </ul>
+                    </div>
+
+                    <div class="user-info"> <!--aqui se mostraran los datos dependiendo el correo-->
+                        <ul>
+                            <li>nombre: sion</li>
+                            <li>apellido: arancibia</li>
+                            <li>correo: afasf@gmail.com</li>
+                            <li>pais: Chile</li>
+                        </ul>
+                    </div>
+
                 </div>
-            </section>
-        </article>
+            </div>
+
+        </div>
     </main>
 
 

@@ -35,7 +35,76 @@
 
     <!--Contenido general de la página-->
     <main>
+        <div class="search-div">
+            <input type="search" placeholder="Buscar parque..." id="search-input">
+            <button id="search-button">Buscar</button>
+        </div>
+        <div class="main-div">
 
+            <div class="filter"> <!--div de los filtros-->
+                <div class="div-input-filter">
+                    <label for="city">Ubicación Geografica</label>
+                    <select name="" id="city">
+                        <option value="">Temuco</option>
+                        <option value="">Padre Las Casas</option>
+                        <option value="">Valdivia</option>
+                        <option value="">Santiago</option>
+                        <option value="">Viña Del Mar</option>
+                        <option value="">Arica</option> <!--ir agregando mas ciudades-->
+                    </select>
+
+                    <label for="cost">¿Costo de entrada?</label>
+                    <input type="checkbox" id="cost">
+
+                    <label for="stars">¿Puntuación?</label>
+                    <select name="" id="stars">
+                        <option value="">1 estrella</option>
+                        <option value="">2 estrellas</option>
+                        <option value="">3 estrellas</option>
+                    </select>
+
+                    <button>Aplicar Filtros</button>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="park"> <!--div de los parques a mostrar-->
+                <div class="grid-div-park"><!--debe haber un div padre para cada publicacion-->
+                    <div class="park-img">
+                        <img src="./img/enviaredumodelo.png" alt=""> <!--aqui se agregará la imagen correspondiente al parque-->
+                    </div>
+
+                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores fuga amet soluta, ipsa est quas voluptatem. Dolor assumenda, harum provident explicabo, facilis nostrum corrupti facere sit laboriosam, neque quam!</p>
+                    </div>
+                    <div class="park-img">
+                        <img src="./img/enviaredumodelo.png" alt=""> <!--aqui se agregará la imagen correspondiente al parque-->
+                    </div>
+
+                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores fuga amet soluta, ipsa est quas voluptatem. Dolor assumenda, harum provident explicabo, facilis nostrum corrupti facere sit laboriosam, neque quam!</p>
+                    </div>
+                    <div class="park-img">
+                        <img src="./img/enviaredumodelo.png" alt=""> <!--aqui se agregará la imagen correspondiente al parque-->
+                    </div>
+
+                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores fuga amet soluta, ipsa est quas voluptatem. Dolor assumenda, harum provident explicabo, facilis nostrum corrupti facere sit laboriosam, neque quam!</p>
+                    </div>
+                    <div class="park-img">
+                        <img src="./img/enviaredumodelo.png" alt=""> <!--aqui se agregará la imagen correspondiente al parque-->
+                    </div>
+
+                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores fuga amet soluta, ipsa est quas voluptatem. Dolor assumenda, harum provident explicabo, facilis nostrum corrupti facere sit laboriosam, neque quam!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 
 

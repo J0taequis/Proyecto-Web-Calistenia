@@ -45,6 +45,132 @@ a{
     color: white;
 }
 
+
+
+/*main*/
+
+
+.main-div { /*Contenedor principal en grid (divide el main en: filtros de parques - parques a mostrar  )*/
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/*lado de la barra de busqueda*/
+
+
+.search-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-column: 1/2;
+}
+
+#search-input {
+    width: 200px;
+    height: 30px;
+    text-align: start;
+    border-radius: 20px;
+    margin-left: 50px;
+}
+
+#search-button {
+    height: 30px;
+    margin: 10px; /*alineado con la barra de busqueda*/
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    
+
+}
+
+#search-button:hover {
+    background-color: aquamarine;
+}
+
+
+/* Lado de los filtros en main*/
+
+
+
+.filter, .div-input-filter { /* div que ocupa la primera columna (30%) del grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    grid-column: 1/2;
+}
+
+.div-input-filter {
+    position: fixed;
+}
+
+label, input, select { /*globales de ancho y alto*/
+    width: 100px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+button{ /*boton para aplicar los filtros*/
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+/* Lado de los parques en main */
+
+
+.park{ /* div que ocupa la segunda columna (70%) del grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 80px;
+    grid-column: 2/3;
+}
+
+.grid-div-park { /* div que guarda la imagen y la descripción del parque*/
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.park-img { /*contenedor de la imagen*/
+    width: 250px;
+    height: 250px;
+    grid-column: 1/2;
+    margin-bottom: 20px;
+}
+
+img { /*la imagen dentro del contenedor*/
+    width: 250px;
+    height: 250px;
+}
+
+.park-description{ /*contenedor de la descripcion*/
+    width: 400px;
+    height: 250px;
+    grid-column: 2/3;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 400px; /*tamaño maximo del parrafo*/
+    padding-left: 30px; /*alejar un poco de la imagen*/
+}
+
+
+
+
 /*footer*/
 
 

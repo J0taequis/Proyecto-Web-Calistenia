@@ -45,6 +45,88 @@ a{
     color: white;
 }
 
+/*Secciones, slider de imagenes*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color:antiquewhite;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(../imgs/calistenia1.jpg);
+    animation: Banner 35s infinite linear;
+}
+
+.banner-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner-content a {
+    text-decoration: none;
+    color: #fff;
+    padding: 9px 20px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+.banner-content a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@keyframes Banner {
+    0%{
+        background-image: url(../imgs/calistenia1.jpg);
+    }
+    20%{
+        background-image: url(../imgs/calistenia1.jpg);
+    }
+    21%{
+        background-image: url(../imgs/calistenia2.jpg);
+    }
+    40%{
+        background-image: url(../imgs/calistenia2.jpg);
+    }
+    41%{
+        background-image: url(../imgs/calistenia3.jpg);
+    }
+    60%{
+        background-image: url(../imgs/calistenia3.jpg);
+    }
+    61%{
+        background-image: url(../imgs/calistenia4.jpg);
+    }
+    80%{
+        background-image: url(../imgs/calistenia4.jpg);
+    }
+    81%{
+        background-image: url(../imgs/calistenia5.jpg);
+    }
+    100%{
+        background-image: url(../imgs/calistenia5.jpg);
+    }
+}
+
 /*footer*/
 
 

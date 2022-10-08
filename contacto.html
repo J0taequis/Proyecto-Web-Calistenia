@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/stylecontacto.css">
+    <script src="js/datos.js"></script>
     <title>Contacto</title>
 </head>
 <body>
@@ -59,41 +60,33 @@
 
 
 
-
-
-
             <div class="form-div">
-                <form action="" id="form-general-data">
+                <form action="informacioncorreo.php" id="form-general-data" method="post">
                     <label for="form-email">Correo electronico</label>
                     <input id="form-email" name="form-email" type="email" required>
                     <label for="select-option">Motivo del mensaje</label>
-                    <select name="" id="select-option">
-                        <option value="">Reportar Bug</option>
-                        <option value="">Reportar Usuario</option>
-                        <option value="">Sugerencia</option>
-                        <option value="">Otro</option>
+                    <select name="select-option" id="select-option">
+                        <option value="reportbug">Reportar Bug</option>
+                        <option value="reportuser">Reportar Usuario</option>
+                        <option value="suggestion">Sugerencia</option>
+                        <option value="other">Otro</option>
                     </select>
                     <label for="message">Escribe tu mensaje</label>
-                    <textarea name="" id="message"></textarea>
-                    <input type="submit" name="" id="submit">
+                    <textarea name="message" id="message"></textarea>
+                    <input type="submit" name="submit" id="submit">
                 </form>
             </div>
 
             <div class="text-info-div">
                 <div class="grid-text-info">
                     <div class="text-div">
-                        <ul>
-                            <li>Ingresa un correo que esté registrado en esta página</li>
-                            <li>Si tu correo está registrado se mostrarán los datos abajo</li>
+                        <ul class="text-div-ul">
+                            <li>Confirmacion de mensaje enviado:</li>
                         </ul>
                     </div>
 
-                    <div class="user-info"> <!--aqui se mostraran los datos dependiendo el correo-->
-                        <ul>
-                            <li>nombre: sion</li>
-                            <li>apellido: arancibia</li>
-                            <li>correo: afasf@gmail.com</li>
-                            <li>pais: Chile</li>
+                    <div class="user-info"> <!--aqui se mostraran los datos dependiendo de la seleccion-->
+                        <ul class="select-info-ul">
                         </ul>
                     </div>
 
@@ -120,6 +113,6 @@
 
     <!--Script de javascript al final del body-->
     <script src="js/script.js"></script>
-
+    <script src="js/variables.js"></script>
 </body>
 </html>

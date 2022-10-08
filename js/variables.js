@@ -14,15 +14,16 @@ formulariocontacto.addEventListener('submit', function (event) {
     event.preventDefault();
     const formularioDataContacto = new FormData(formulariocontacto);
     guardarMensajeUsuario(formularioDataContacto); /*ojo al tejo*/
-    
 });
 
 
 const selectoption = document.getElementById('select-option');  /*para obtener informacion de la base de datos*/ 
+const optionemailspadre = document.getElementById('insert-emails'); // insertar nuevo selectoption donde mostrar todos los correos
 
 selectoption.addEventListener('change',function (event){
-    const selectInfolU = document.querySelector('.select-info-ul');
+    let actual = 'motivo=' + encodeURIComponent(selectoption.options[selectoption.selectedIndex].value);
     event.preventDefault();
-    mostrarCorreosSeleccion(selectInfolU);
-    
+    mostrarCorreosSeleccion(actual,optionemailspadre);
 })
+
+

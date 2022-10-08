@@ -16,15 +16,19 @@ if ($conn->connect_error) {
 }
 
 //get form data
-$motivo = $_GET['select-option'];
+
+$motivo = $_POST['motivo'];
 
 //insert form data into database
 $sql = "SELECT correo FROM contacto WHERE motivo='$motivo'";
 $result = $conn->query($sql);
 $response = array();
 
-$response['correo'] = "holiwi";
-json_encode($response);
+while($row = mysqli_fetch_assoc($result)){
+    $response [] = $row['correo'];
+}
+
+exit(json_encode($response));
 
 $conn->close();
 

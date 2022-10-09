@@ -11,7 +11,7 @@ function crearElementoLi(padre,texto){ // para crear elementos li
     padre.appendChild(li);
 }
 
-function crearElementoSelectOption(padre,texto){ // para crear elementos select
+function crearElementoSelectOption(padre,texto){ // para crear elementos select para ver los correos
     if(eliminar == 1){
         document.getElementById('respuesta').remove();// elimino el anterior
     }
@@ -21,8 +21,6 @@ function crearElementoSelectOption(padre,texto){ // para crear elementos select
     padre.appendChild(option);
     eliminar = 0;
 }
-
-
 
 
 async function enviarFormulario(datosFormulario) { // inserta en la tabla usuarios un nuevo usuario cuando este se registra

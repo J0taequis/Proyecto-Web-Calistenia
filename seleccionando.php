@@ -1,11 +1,8 @@
 <?php
 
 //get form data and send to mysql database
-//import connection variables
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "calistenia";
+//connection variables
+include_once 'config.php';
 
 // Create connection - OOP
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//get form data
+//recibe cambios del select option 
 
 $motivo = $_POST['motivo'];
 

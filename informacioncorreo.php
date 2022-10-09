@@ -2,10 +2,7 @@
 
 //get form data and send to mysql database
 //import connection variables
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "calistenia";
+include_once 'config.php';
 
 // Create connection - OOP
 $conn = new mysqli($servername, $username, $password, $dbname);

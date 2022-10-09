@@ -33,7 +33,7 @@ async function enviarFormulario(datosFormulario) { // inserta en la tabla usuari
 }
 
 
-async function guardarMensajeUsuario(datosusuario) { // inserta en la base de datos en la tabla contacto lo obtenido del formulario
+async function guardarMensajeUsuario(datosusuario,textdivul) { // inserta en la base de datos en la tabla contacto lo obtenido del formulario
     const response = await fetch('informacioncorreo.php', {
         method: 'POST',
         body: datosusuario
@@ -41,6 +41,8 @@ async function guardarMensajeUsuario(datosusuario) { // inserta en la base de da
 
     const respuesta = await response.text();
     const obj = JSON.parse(respuesta);
+
+    crearElementoLi(textdivul,obj.success);
 
 }
 

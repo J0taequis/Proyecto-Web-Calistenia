@@ -25,10 +25,10 @@ $result = $conn->query($sql);
 
 $response = array();
 if ($result) {
-    $response['success'] = "exito";
+    $response['success'] = HTTP_response_code();//200 si estuvo bien
     exit(json_encode($response));
 } else {
-    $response['error'] = "error" . $conn->error;
+    $response['success'] = HTTP_response_code() . $conn->error;
     exit(json_encode($response));
 }
 

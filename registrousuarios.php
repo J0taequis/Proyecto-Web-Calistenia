@@ -15,10 +15,10 @@ if ($conn->connect_error) {
 //get form data
 $nombre = $_POST['nombre'];
 $email = $_POST['correo'];
-$contraseña = $_POST['contraseña'];
+$contrasena = $_POST['contrasena'];
 
 //insert form data into database
-$sql = "INSERT INTO usuario (Nombre, correo, contraseña) VALUES ('$nombre', '$email', '$contraseña')";
+$sql = "INSERT INTO usuario (Nombre, correo, contrasena) VALUES ('$nombre', '$email', '$contrasena')";
 $result = $conn->query($sql);
 
 $response = array();

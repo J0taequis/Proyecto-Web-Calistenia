@@ -42,18 +42,18 @@
                     <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
                     <button type="button" class="toggle-btn" onclick="register()">Registrarse</button>
                 </div>
-                <form id="login-form" action="" class="input-group" method="dialog">
+                <form id="login-form" class="input-group" method="dialog">
                     <input type="text" class="input-field" placeholder="Nombre de usuario" required>
                     <input type="password" class="input-field" placeholder="contraseña" required>
                     <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
                     <button type="submit" class="submit-btn">Acceder</button>
                 </form>
-                <form id="register-form" action="" class="input-group" method="post">
+                <form id="register-form" class="input-group" method="post">
                     <input type="text" class="input-field" placeholder="Nombre de usuario" required>
                     <input type="email" class="input-field" placeholder="Correo" required>
                     <input type="password" class="input-field" placeholder="contraseña" required>
                     <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
-                    <input type="submit" class="submit-btn"></input>
+                    <input type="submit" class="submit-btn">
                 </form>
             </dialog>
 
@@ -65,7 +65,7 @@
                         <button id="search-button">Buscar</button>
                     </div>
                     <label for="city">Ubicación Geografica</label>
-                    <select name="" id="city">
+                    <select name="ciudad" id="city">
                         <option value="">Temuco</option>
                         <option value="">Padre Las Casas</option>
                         <option value="">Valdivia</option>
@@ -78,7 +78,7 @@
                     <input type="checkbox" id="cost">
 
                     <label for="stars">¿Puntuación?</label>
-                    <select name="" id="stars">
+                    <select name="stars" id="stars">
                         <option value="">1 estrella</option>
                         <option value="">2 estrellas</option>
                         <option value="">3 estrellas</option>

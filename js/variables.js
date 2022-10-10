@@ -4,7 +4,7 @@ const formularioregistro = document.getElementById('register-form'); /*para inse
 formularioregistro.addEventListener('submit', function (event) {
     event.preventDefault();
     const formularioData = new FormData(formularioregistro);
-    enviarFormulario(formularioData);
+    enviarFormulario(formularioData); 
 });
 
 const formulariocontacto = document.getElementById('form-general-data'); /*para insertar mensaje nuevo en la base de datos*/ 

@@ -28,6 +28,8 @@ async function enviarFormulario(datosFormulario) { // inserta en la tabla usuari
         method: 'POST',
         body: datosFormulario
     });
+    const respuesta = await response.text();
+    const obj = JSON.parse(respuesta);
 }
 
 

@@ -4,8 +4,6 @@ async function insertarUsuario(datosFormulario) { // inserta en la tabla usuario
         method: 'POST',
         body: datosFormulario
     });
-    const respuesta = await response.text();
-    const obj = JSON.parse(respuesta);
 }
 
 

@@ -1,29 +1,5 @@
 
-let eliminar = 0;
-
-function getVariable(variable){ // traer de variables.js
-    return variable;
-}
-
-function crearElementoLi(padre,texto){ // para crear elementos li
-    let li = document.createElement('li');
-    li.innerHTML= texto;
-    padre.appendChild(li);
-}
-
-function crearElementoSelectOption(padre,texto){ // para crear elementos select para ver los correos
-    if(eliminar == 1){
-        document.getElementById('respuesta').remove();// elimino el anterior
-    }
-    let option = document.createElement('option');
-    option.setAttribute('id', 'respuesta');
-    option.innerHTML= texto;
-    padre.appendChild(option);
-    eliminar = 0;
-}
-
-
-async function enviarFormulario(datosFormulario) { // inserta en la tabla usuarios un nuevo usuario cuando este se registra
+async function insertarUsuario(datosFormulario) { // inserta en la tabla usuarios un nuevo usuario cuando este se registra
     const response = await fetch('registrousuarios.php', {
         method: 'POST',
         body: datosFormulario
@@ -33,8 +9,8 @@ async function enviarFormulario(datosFormulario) { // inserta en la tabla usuari
 }
 
 
-async function guardarMensajeUsuario(datosusuario,textdivul) { // inserta en la base de datos en la tabla contacto lo obtenido del formulario
-    const response = await fetch('informacioncorreo.php', {
+async function insertarMensajeUsuario(datosusuario) { // inserta en la base de datos en la tabla contacto lo obtenido del formulario
+    const response = await fetch('insertarmensaje.php', {
         method: 'POST',
         body: datosusuario
     });
@@ -42,23 +18,10 @@ async function guardarMensajeUsuario(datosusuario,textdivul) { // inserta en la 
     const respuesta = await response.text();
     const obj = JSON.parse(respuesta);
 
-    crearElementoLi(textdivul,obj.success);
+    //Mostrar por pantalla estatus
+    alert(obj.success);
 
 }
 
-
-async function mostrarCorreosSeleccion(actual,optionemailspadre) { //muestra los correos de las personas de acuerdo al motivo del reclamo
-    const response = await fetch('seleccionando.php', {
-        method: 'POST',
-        headers:new Headers({'Content-Type': 'application/x-www-form-urlencoded'}),
-        body: actual
-    });
-
-    const respuesta = await response.text();
-    const obj = JSON.parse(respuesta);
-    const correos = obj;
-    crearElementoSelectOption(optionemailspadre,correos);
-    eliminar = 1;
-}
 
 

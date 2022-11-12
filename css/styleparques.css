@@ -8,7 +8,6 @@
 /* Imagen de fondo (afecta toda la pagina)*/
 
 body{
-    background-image:url("https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-54047.jpg?w=1380&t=st=1665004528~exp=1665005128~hmac=875b987a41b716d9cab6aed1bf7dc8f497604dc095a80f7cd49a1ed3dad00fc2");
     background-size: cover;
 }
 
@@ -61,7 +60,7 @@ li {
 
 }
 
-li:hover {
+li > a:hover {
     background-color: #004d40;
 }
 
@@ -168,8 +167,6 @@ main {
     background-color: transparent;
     border: none;
 }
-
-
 
 
 /* Lado de los parques en main */
@@ -341,5 +338,3 @@ span {
     align-items: flex-end;
     margin-right: 50px;
 }
-
-

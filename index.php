@@ -19,10 +19,10 @@
 
     <header>
         <nav>
-            <button type="button" id="login-button">Iniciar sesión</button>
+            <button type="button" id="login-button">Cerrar sesión</button>
             <ul class="ul-flex-row">
-                <li><a href="index.html">Inicio / Home</a></li>
-                <li><a href="parques.html">Buscar Parques</a> </li>
+                <li><a href="index.php">Inicio / Home</a></li>
+                <li><a href="parques.php">Buscar Parques</a> </li>
                 <li><a href="ejercicios.html">Ejercicios</a> </li>
                 <li class="QS"><a>Quienes Somos</a>
                     <ul class="ul-dropdown">
@@ -39,30 +39,9 @@
     <!--Contenido general de la página-->
     <main>
         <article class="article-content" aria-label="article">
-            <dialog id="form-box">
-                <button type="button" id="Close-pop-up" aria-label="Close">X</button>
-                <div class="button-box">
-                    <div id="selector"></div>
-                    <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
-                    <button type="button" class="toggle-btn" onclick="register()">Registrarse</button>
-                </div>
-                <form id="login-form" class="input-group">
-                    <input type="text" class="input-field" placeholder="Nombre de usuario" required>
-                    <input type="password" class="input-field" placeholder="contraseña" required>
-                    <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
-                    <button type="submit" class="submit-btn">Acceder</button>
-                </form>
-                <form id="register-form" class="input-group" method="post">
-                    <input name="nombre" type="text" class="input-field" placeholder="Nombre de usuario" required>
-                    <input name="correo" type="email" class="input-field" placeholder="Correo" required>
-                    <input name="contrasena" type="password" class="input-field" placeholder="contraseña" required>
-                    <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
-                    <input type="submit" name="submit" class="submit-btn">
-                </form>
-            </dialog>
             <section class="banner">
                 <div class="banner-content">
-                    <h2>Bienvenidos a al mundo de la calistenia</h2>
+                    <h2>Bienvenidos al mundo de la calistenia</h2>
                     <a href="#">Ver artículos</a>
                 </div>
             </section>
@@ -134,7 +113,6 @@
 
 
     <!--Script de javascript al final del body-->
-    <script src="js/script.js"></script>
     <script src="js/variables.js"></script>
 </body>
 

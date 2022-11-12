@@ -17,8 +17,8 @@
         <nav id="header-nav">
             <button type="button" id="login-button">Iniciar sesión</button>
             <ul class="ul-flex-row">
-                <li><a href="index.html">Inicio / Home</a></li>
-                <li><a href="parques.html">Buscar Parques</a> </li>
+                <li><a href="index.php">Inicio / Home</a></li>
+                <li><a href="parques.php">Buscar Parques</a> </li>
                 <li><a href="ejercicios.html">Ejercicios</a> </li>
                 <li class="QS"><a>Quienes Somos</a>
                     <ul class="ul-dropdown">
@@ -35,30 +35,6 @@
     <!--Contenido general de la página-->
     <main>
         <div class="main-div">
-
-            <dialog id="form-box">
-                <button type="button" id="Close-pop-up" aria-label="Close">X</button>
-                <div class="button-box">
-                    <div id="selector"></div>
-                    <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
-                    <button type="button" class="toggle-btn" onclick="register()">Registrarse</button>
-                </div>
-                <form id="login-form" class="input-group">
-                    <input type="text" class="input-field" placeholder="Nombre de usuario" required>
-                    <input type="password" class="input-field" placeholder="contraseña" required>
-                    <input type="checkbox" class="check-box"><span>Recordar contraseña.</span>
-                    <button type="submit" class="submit-btn">Acceder</button>
-                </form>
-                <form id="register-form" class="input-group" method="post">
-                    <input name="nombre" type="text" class="input-field" placeholder="Nombre de usuario" required>
-                    <input name="correo" type="email" class="input-field" placeholder="Correo" required>
-                    <input name="contrasena" type="password" class="input-field" placeholder="contraseña" required>
-                    <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones.</span>
-                    <input type="submit" name="submit" class="submit-btn">
-                </form>
-            </dialog>
-
-
             <div class="filter"> <!--div de los filtros-->
                 <div class="div-input-filter">
                     <div class="search-div">
@@ -92,7 +68,7 @@
             <div class="park"> <!--div de los parques a mostrar-->
                 <div class="grid-div-park"><!--debe haber un div padre para cada publicacion-->
                     <div class="park-img">
-                        <img src="./img/enviaredumodelo.png" alt=""> <!--aqui se agregará la imagen correspondiente al parque-->
+                        <!--aqui se agregará la imagen correspondiente al parque-->
                     </div>
 
                     <div class="park-description"> <!--descripcion de los parques a mostrar-->
@@ -118,7 +94,6 @@
 
 
     <!--Script de javascript al final del body-->
-    <script src="js/script.js"></script>
     <script src="js/variables.js"></script>
 </body>
 </html>

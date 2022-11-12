@@ -16,9 +16,34 @@ if ($conn->connect_error) {
 $nombre = $_POST['nombre'];
 $email = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
+$password_encrypted = hash('sha512', $contrasena);
 
 //insert form data into database
-$sql = "INSERT INTO usuario (Nombre, correo, contrasena) VALUES ('$nombre', '$email', '$contrasena')";
+$sql = "INSERT INTO usuario (Nombre, correo, contrasena) VALUES ('$nombre', '$email', '$password_encrypted')";
+
+$verificar_email = mysqli_query($conn, "SELECT * FROM usuario WHERE correo = '$email' ");
+$verificar_usuario = mysqli_query($conn, "SELECT * FROM usuario WHERE Nombre = '$nombre' ");
+
+if(mysqli_num_rows($verificar_email) > 0) {
+    echo '
+        <script>
+            alert("Este correo ya está registrado. intentalo de nuevo");
+            
+        </script>
+        ';
+    exit();
+}
+
+if(mysqli_num_rows($verificar_usuario) > 0) {
+    echo '
+        <script>
+            alert("Este usuario ya está registrado. intentalo de nuevo");
+            
+        </script>
+        ';
+    exit();
+}
+
 $result = $conn->query($sql);
 
 $response = array();

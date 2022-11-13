@@ -16,9 +16,20 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM rutina";
 $result = $conn->query($sql);
 
+$arr = array();
+$contador = 0;
+
+while($row = mysqli_fetch_assoc($result)){
+    $arr[$contador] = $row;
+    $contador += 1;
+ }
+    
+
+
 $response = array();
 if ($result) {
-    $response['success'] = HTTP_response_code();//200 si estuvo bien
+    $response['success'] = $arr;
+    $response['contador'] = $contador;
     exit(json_encode($response));
 } else {
     $response['success'] = HTTP_response_code() . $conn->error;

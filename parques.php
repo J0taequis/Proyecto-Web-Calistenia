@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/styleparques.css">
-    <script src="js/datos.js"></script>
+    <script src="js/crudrutina.js"></script>
     <title>Parques de calistenia</title>
 </head>
 <body>
@@ -41,7 +41,7 @@
 
                     <!--Toda la logica correspondiente al crud-->
 
-                    
+                    <h3>Agregar Ejercicio</h3>
                     <!--Agregar ejercicio-->
                     <div>
                         <form action="" id="agregar-ejercicio-form"></form>
@@ -65,7 +65,7 @@
                             <input type="submit" form="agregar-ejercicio-form">
                         </div>
                     </div>
-
+                    <h3>eliminar Ejercicio</h3>
                     <!--eliminar ejercicio-->
                     <div>
                         <form action="" id="eliminar-ejercicio-form" method="post"></form>
@@ -79,7 +79,7 @@
                     </div>
 
                     <!--Editar ejercicio-->
-
+                    <h3>Editar Ejercicio</h3>
                     <div>
                         <form action="" id="editar-ejercicio-form"></form>
                         <div>
@@ -108,10 +108,10 @@
                     </div>
 
                     <!--mostrar ejercicios-->
-
+                    <h3>Mostrar/Recargar Ejercicios</h3>
                     <div>
                         <div>
-                            <button id="mostrar-rutina"></button>
+                            <button id="mostrar-rutina">Mostrar Todo</button>
                         </div>
                     </div>
 
@@ -122,19 +122,6 @@
                 <div class="grid-div-park"><!--debe haber un div padre para cada publicacion-->
                     <div class="park-img">
                         <!--aqui se agregará la imagen correspondiente al parque-->
-                    </div>
-
-                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
-                        <p>EJERCIO A DESARROLLAR</p>
-                        <p>Cantidad De repeticiones</p>
-                        <p>cantidad de series</p>
-                        <p>comentario</p>
-                    </div>
-                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
-                        <p>EJERCIO A DESARROLLAR</p>
-                        <p>Cantidad De repeticiones</p>
-                        <p>cantidad de series</p>
-                        <p>comentario</p>
                     </div>
                 </div>
             </div>

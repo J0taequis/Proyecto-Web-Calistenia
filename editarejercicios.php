@@ -20,7 +20,7 @@
     $Idusuario = 1;
 
     if($_SESSION['logeado'] == "si"){
-        $sql = "UPDATE rutina SET ejercicio='$ejercicio',cantrepeticiones='$cantrepeticiones',cantseries='$cantseries',comentario='$comentario'";
+        $sql = "UPDATE rutina SET ejercicio='$ejercicio',cantrepeticiones='$cantrepeticiones',cantseries='$cantseries',comentario='$comentario' WHERE Idrutina='$idejercicio'";
     }else{
         echo'<p>inicia sesion para tener acceso...</p>';
     }

@@ -157,7 +157,14 @@ main {
     border: none;
 }
 
-
+#mostrar-rutina{
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
 /* Lado de los parques en main */
 
 

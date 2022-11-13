@@ -25,7 +25,7 @@ editarEjercicioForm.addEventListener("submit", function (event){
 });
 
 let botonMostrarRutina = document.getElementById("mostrar-rutina");
-
+const gridDivPark = document.getElementsByClassName("grid-div-park"); /* div padre donde iran las rutinas*/
 botonMostrarRutina.addEventListener("click", function (event){
     event.preventDefault();
     mostrarRutina();

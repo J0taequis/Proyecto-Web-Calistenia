@@ -22,4 +22,56 @@ async function insertarMensajeUsuario(datosusuario) { // inserta en la base de d
 }
 
 
+async function insertarNuevoEjercicio(datosEjercicio){
+    const response = await fetch('agregarejercicio.php', {
+        method: 'POST',
+        body: datosEjercicio
+    });
+    const respuesta = await response.text();
+    const obj = JSON.parse(respuesta);
 
+    //Mostrar por pantalla estatus
+    console.log(obj.success);
+
+}
+
+
+async function eliminarEjercicio(datosEjercicio){
+    const response = await fetch('quitarejercicio.php', {
+        method: 'POST',
+        body: datosEjercicio
+    });
+    const respuesta = await response.text();
+    const obj = JSON.parse(respuesta);
+
+    //Mostrar por pantalla estatus
+    console.log(obj.success);
+
+}
+
+
+async function editarEjercicio(datosEjercicio){
+    const response = await fetch('editarejercicios.php', {
+        method: 'POST',
+        body: datosEjercicio
+    });
+    const respuesta = await response.text();
+    const obj = JSON.parse(respuesta);
+
+    //Mostrar por pantalla estatus
+    console.log(obj.success);
+
+}
+
+async function mostrarRutina(){
+    const response = await fetch('editarejercicios.php', {
+        method: 'POST',
+        body: datosEjercicio
+    });
+    const respuesta = await response.text();
+    const obj = JSON.parse(respuesta);
+
+    //Mostrar por pantalla estatus
+    console.log(obj.success);
+
+}

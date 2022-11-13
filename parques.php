@@ -37,31 +37,84 @@
         <div class="main-div">
             <div class="filter"> <!--div de los filtros-->
                 <div class="div-input-filter">
-                    <div class="search-div">
-                        <input type="search" placeholder="Buscar parque..." id="search-input">
-                        <button id="search-button">Buscar</button>
+                    <h2>RUTINA DE EJERCICIOS</h2>
+
+                    <!--Toda la logica correspondiente al crud-->
+
+                    
+                    <!--Agregar ejercicio-->
+                    <div>
+                        <form action="" id="agregar-ejercicio-form"></form>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="ejercicio" type="text" form="agregar-ejercicio-form">
+                            <label for="ejercicio">nombre del ejercicio</label>
+                        </div>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="cantrepeticiones" type="text" form="agregar-ejercicio-form">
+                            <label for="cantrepeticiones">cantidad repeticiones</label>
+                        </div>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="cantseries" type="text" form="agregar-ejercicio-form">
+                            <label for="cantseries">cantidad de series</label>
+                        </div>
+                        <div>
+                            <textarea class="input-agregar-ejercicio" name="comentario" id="comentario" form="agregar-ejercicio-form"></textarea>
+                            <label for="comentario">comentario del ejercicio</label>
+                        </div>
+                        <div>
+                            <input type="submit" form="agregar-ejercicio-form">
+                        </div>
                     </div>
-                    <label for="city">Ubicación Geografica</label>
-                    <select name="ciudad" id="city">
-                        <option value="">Temuco</option>
-                        <option value="">Padre Las Casas</option>
-                        <option value="">Valdivia</option>
-                        <option value="">Santiago</option>
-                        <option value="">Viña Del Mar</option>
-                        <option value="">Arica</option> <!--ir agregando mas ciudades-->
-                    </select>
 
-                    <label for="cost">¿Costo de entrada?</label>
-                    <input type="checkbox" id="cost">
+                    <!--eliminar ejercicio-->
+                    <div>
+                        <form action="" id="eliminar-ejercicio-form" method="post"></form>
+                        <div>
+                            <input type="text" name="eliminar-ejercicio" form="eliminar-ejercicio-form">
+                            <label for="eliminar-ejercicio">id del ejercicio a eliminar</label>
+                        </div>
+                        <div>
+                            <input type="submit" form="eliminar-ejercicio-form">
+                        </div>
+                    </div>
 
-                    <label for="stars">¿Puntuación?</label>
-                    <select name="stars" id="stars">
-                        <option value="">1 estrella</option>
-                        <option value="">2 estrellas</option>
-                        <option value="">3 estrellas</option>
-                    </select>
+                    <!--Editar ejercicio-->
 
-                    <button>Aplicar Filtros</button>
+                    <div>
+                        <form action="" id="editar-ejercicio-form"></form>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="idejercicio" type="text" form="editar-ejercicio-form">
+                            <label for="idejercicio">id del ejercicio a editar</label>
+                        </div>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="ejercicio-editar" type="text" form="editar-ejercicio-form">
+                            <label for="ejercicio-editar">nombre del ejercicio editado</label>
+                        </div>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="cantrepeticiones-editar" type="text" form="editar-ejercicio-form">
+                            <label for="cantrepeticiones-editar">cantidad repeticiones editado</label>
+                        </div>
+                        <div>
+                            <input class="input-agregar-ejercicio" name="cantseries-editar" type="text" form="editar-ejercicio-form">
+                            <label for="cantseries-editar">cantidad de series editado</label>
+                        </div>
+                        <div>
+                            <textarea class="input-agregar-ejercicio" name="comentario-editar" id="comentario-editar" form="editar-ejercicio-form"></textarea>
+                            <label for="comentario-editar">comentario del ejercicio editado</label>
+                        </div>
+                        <div>
+                            <input type="submit" form="editar-ejercicio-form">
+                        </div>
+                    </div>
+
+                    <!--mostrar ejercicios-->
+
+                    <div>
+                        <div>
+                            <button id="mostrar-rutina"></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -72,7 +125,16 @@
                     </div>
 
                     <div class="park-description"> <!--descripcion de los parques a mostrar-->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores fuga amet soluta, ipsa est quas voluptatem. Dolor assumenda, harum provident explicabo, facilis nostrum corrupti facere sit laboriosam, neque quam!</p>
+                        <p>EJERCIO A DESARROLLAR</p>
+                        <p>Cantidad De repeticiones</p>
+                        <p>cantidad de series</p>
+                        <p>comentario</p>
+                    </div>
+                    <div class="park-description"> <!--descripcion de los parques a mostrar-->
+                        <p>EJERCIO A DESARROLLAR</p>
+                        <p>Cantidad De repeticiones</p>
+                        <p>cantidad de series</p>
+                        <p>comentario</p>
                     </div>
                 </div>
             </div>
@@ -94,6 +156,6 @@
 
 
     <!--Script de javascript al final del body-->
-    <script src="js/variables.js"></script>
+    <script src="js/variablesrutinas.js"></script>
 </body>
 </html>

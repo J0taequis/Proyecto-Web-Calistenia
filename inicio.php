@@ -39,7 +39,7 @@ if(!isset($_SESSION['usuario'])) {
 
     <header>
         <nav>
-            <button type="button" id="login-button">Cerrar sesión</button>
+            <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
             <ul class="ul-flex-row">
                 <li><a href="index.php">Inicio / Home</a></li>
                 <li><a href="parques.php">Buscar Parques</a> </li>
@@ -130,11 +130,9 @@ if(!isset($_SESSION['usuario'])) {
             </ul>
         </nav>
     </footer>
-    <a href = "sessionDestroy.php">Cerrar sesión</a>
 
 
     <!--Script de javascript al final del body-->
-    <script src="js/variables.js"></script>
 </body>
 
 </html>

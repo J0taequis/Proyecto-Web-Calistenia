@@ -17,10 +17,9 @@
     $cantrepeticiones = $_POST['cantrepeticiones-editar'];
     $cantseries = $_POST['cantseries-editar'];
     $comentario = $_POST['comentario-editar'];
-    $Idusuario = 1;
 
-    if($_SESSION['logeado'] == "si"){
-        $sql = "UPDATE rutina SET ejercicio='$ejercicio',cantrepeticiones='$cantrepeticiones',cantseries='$cantseries',comentario='$comentario' WHERE Idrutina='$idejercicio'";
+    if(isset($_SESSION['usuario'])){
+        $sql = "UPDATE rutina SET ejercicio='$ejercicio',cantrepeticiones='$cantrepeticiones',cantseries='$cantseries',comentario='$comentario' WHERE (Idrutina='$idejercicio') AND (Idusuario='$_SESSION['idlogueado']')";
     }else{
         echo'<p>inicia sesion para tener acceso...</p>';
     }

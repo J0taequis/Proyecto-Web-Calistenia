@@ -16,10 +16,9 @@
     $cantrepeticiones = $_POST['cantrepeticiones'];
     $cantseries = $_POST['cantseries'];
     $comentario = $_POST['comentario'];
-    $Idusuario = 1;
 
-    if($_SESSION['logeado'] == "si"){
-        $sql = "INSERT INTO rutina (ejercicio, cantrepeticiones, cantseries, comentario,Idusuario) VALUES ('$ejercicio', '$cantrepeticiones', '$cantseries', '$comentario','$Idusuario')";
+    if(isset($_SESSION['usuario'])){
+        $sql = "INSERT INTO rutina (ejercicio, cantrepeticiones, cantseries, comentario,Idusuario) VALUES ('$ejercicio', '$cantrepeticiones', '$cantseries', '$comentario','$_SESSION['idlogueado']')";
     }else{
         echo'<p>inicia sesion para tener acceso...</p>';
     }

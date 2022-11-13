@@ -1,6 +1,5 @@
 <?php
     session_start();
-    $_SESSION['logeado'] = "si";
     if(isset($_SESSION['usuario'])) {
         header("location: inicio.php");
     }

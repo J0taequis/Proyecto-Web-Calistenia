@@ -42,7 +42,7 @@ if(!isset($_SESSION['usuario'])) {
             <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
             <ul class="ul-flex-row">
                 <li><a href="index.php">Inicio / Home</a></li>
-                <li><a href="parques.php">Buscar Parques</a> </li>
+                <li><a href="rutinas.php">Mis Rutinas</a> </li>
                 <li><a href="ejercicios.html">Ejercicios</a> </li>
                 <li class="QS"><a>Quienes Somos</a>
                     <ul class="ul-dropdown">

@@ -7,7 +7,7 @@ agregarEjercicioForm.addEventListener("submit", function(event){
     insertarNuevoEjercicio(formularioData);
 });
 
-eliminarEjercicioForm  = document.getElementById("eliminar-ejercicio-form");
+let eliminarEjercicioForm  = document.getElementById("eliminar-ejercicio-form");
 
 eliminarEjercicioForm.addEventListener("submit", function(event){
     event.preventDefault();
@@ -16,7 +16,7 @@ eliminarEjercicioForm.addEventListener("submit", function(event){
 });
 
 
-editarEjercicioForm = document.getElementById("editar-ejercicio-form");
+let editarEjercicioForm = document.getElementById("editar-ejercicio-form");
 
 editarEjercicioForm.addEventListener("submit", function (event){
     event.preventDefault();

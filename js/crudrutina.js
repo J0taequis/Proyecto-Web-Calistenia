@@ -39,6 +39,7 @@ async function editarEjercicio(datosEjercicio){
 
 }
 
+
 async function mostrarRutina(){
     const response = await fetch('listarejercicios.php', {
         method: 'POST',

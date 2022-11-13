@@ -133,10 +133,10 @@ main {
 }
 
 
-/* Lado de los filtros en main*/
+/* Lado del crud en main*/
 
 .div-input-filter {
-    position: fixed; /*se mueven los filtros por toda la pantalla ojo aqui*/
+    position: fixed; /*se mueven los crud por toda la pantalla ojo aqui*/
 }
 
 .filter, .div-input-filter { /* div que ocupa la primera columna (30%) del grid*/
@@ -144,26 +144,34 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
     grid-column: 1/2;
 }
 
-.div-input-filter > button{ /*boton para aplicar los filtros*/
+
+#mostrar-rutina{
     width: 85px;
-    height: 85px;
+    height: 35px;
     cursor: pointer;
     text-align: center;
     background-color: transparent;
     border: none;
 }
 
-#mostrar-rutina{
-    width: 85px;
-    height: 85px;
-    cursor: pointer;
-    text-align: center;
-    background-color: transparent;
-    border: none;
+#mostrar-rutina:hover {
+    background-color: antiquewhite;
+}
+
+.input-crud{
+    width: 200px;
+    margin-bottom: 2px;
+}
+
+h2 {
+    margin-bottom: 3px;
+}
+h3 {
+    margin-bottom: 2px;
 }
 /* Lado de los parques en main */
 
@@ -213,7 +221,7 @@ p {
 
 /*footer*/
 footer {
-    margin-top: 400px;
+    margin-top: 500px;
 }
 #footer-nav {
     display: flex;

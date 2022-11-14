@@ -14,8 +14,9 @@
     //get form data
     $Idrutina = $_POST['eliminar-ejercicio'];
 
-    if($_SESSION['logeado'] == "si"){
-        $sql = "DELETE FROM rutina WHERE Idrutina ='$Idrutina'";
+    if(isset($_SESSION['usuario'])){
+        $Idusuario = $_SESSION['idlogueado'];
+        $sql = "DELETE FROM rutina WHERE (Idrutina ='$Idrutina') AND (Idusuario='$Idusuario')";
     }else{
         echo'<p>inicia sesion para tener acceso...</p>';
     }

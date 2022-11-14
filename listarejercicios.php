@@ -3,7 +3,7 @@
 //get form data and send to mysql database
 //import connection variables
 include_once 'config.php';
-
+session_start();
 // Create connection - OOP
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -13,8 +13,12 @@ if ($conn->connect_error) {
 }
 
 //insert form data into database
-$sql = "SELECT * FROM rutina";
-$result = $conn->query($sql);
+if(isset($_SESSION['usuario'])){
+    $Idusuario = $_SESSION['idlogueado'];
+    $sql = "SELECT * FROM rutina WHERE Idusuario='$Idusuario'";
+    $result = $conn->query($sql);
+}
+
 
 $arr = array();
 $contador = 0;

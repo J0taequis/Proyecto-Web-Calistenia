@@ -19,13 +19,18 @@
     $comentario = $_POST['comentario-editar'];
 
     if(isset($_SESSION['usuario'])){
-        $sql = "UPDATE rutina SET ejercicio='$ejercicio',cantrepeticiones='$cantrepeticiones',cantseries='$cantseries',comentario='$comentario' WHERE (Idrutina='$idejercicio') AND (Idusuario='$_SESSION['idlogueado']')";
+        $Idusuario = $_SESSION['idlogueado'];
+        $sql = "UPDATE rutina SET ejercicio='$ejercicio',cantrepeticiones='$cantrepeticiones',cantseries='$cantseries',comentario='$comentario' WHERE (Idrutina='$idejercicio') AND (Idusuario='$Idusuario')";
+
     }else{
-        echo'<p>inicia sesion para tener acceso...</p>';
+        echo '
+        <script>
+            alert("Algun dato invalido");
+        </script>
+        ';
     }
 
     $result = $conn->query($sql);
-
     $response = array();
 
     if ($result) {
@@ -35,5 +40,4 @@
         $response['error'] = "error" . $conn->error;
         exit(json_encode($response));
     }
-
 ?>

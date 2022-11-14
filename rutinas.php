@@ -37,7 +37,7 @@ if(!isset($_SESSION['usuario'])) {
         <nav id="header-nav">
             <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
             <ul class="ul-flex-row">
-                <li><a href="index.php">Inicio / Home</a></li>
+                <li><a href="inicio.php">Inicio / Home</a></li>
                 <li><a href="rutinas.php">Mis Rutinas</a> </li>
                 <li><a href="ejercicios.html">Ejercicios</a> </li>
                 <li class="QS"><a>Quienes Somos</a>

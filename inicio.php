@@ -8,6 +8,7 @@
     <meta name="robots" content="NOINDEX">
     <meta name="description" content="Proyecto Desarrollo Web Hecho por Sion Arancibia y Eduardo Jaramillo">
     <link rel="stylesheet" type="text/css" href="./css/styleindex.css">
+    <script src="js/datos.js"></script>
     <title>Proyecto de calistenia</title>
 </head>
 
@@ -22,7 +23,13 @@
             <ul class="ul-flex-row">
                 <li><a href="inicio.php">Inicio / Home</a></li>
                 <li><a href="rutinas.php">Mis Rutinas</a> </li>
-                <li class="QS"><a href="aboutus.html" >Quienes Somos</a></li>
+                <li><a href="ejercicios.html">Ejercicios</a> </li>
+                <li class="QS"><a>Quienes Somos</a>
+                    <ul class="ul-dropdown">
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                    </ul>
+                </li>
                 <li><a href="contacto.html">Contacto</a> </li>
             </ul>
         </nav>
@@ -103,6 +110,8 @@
             </ul>
         </nav>
     </footer>
+
+
     <!--Script de javascript al final del body-->
 </body>
 

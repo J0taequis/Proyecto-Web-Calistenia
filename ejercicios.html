@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styleejercicios.css">
+    <script src="js/datos.js"></script>
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <!--Barra de navegación-->
+
+    <header>
+        <nav id="header-nav">
+            <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
+            <ul class="ul-flex-row">
+                <li><a href="inicio.php">Inicio / Home</a></li>
+                <li><a href="rutinas.php">Mis Rutinas</a> </li>
+                <li><a href="ejercicios.html">Ejercicios</a> </li>
+                <li class="QS"><a>Quienes Somos</a>
+                    <ul class="ul-dropdown">
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--Contenido general de la página-->
+
+
+    <main>
+        <div class="main-div">
+
+            <div class="filter"> <!--div de los filtros-->
+                <ul class="ul-filter">
+                    <li>Estaticos
+                        <ul class="statics-dropdown">
+                            <li>Tuck Front Lever</li>
+                            <li>Advandce Tuck Front Lever</li>
+                            <li>One Leg Front Lever</li>
+                            <li>Front Lever</li>
+                            <li>Front Lever Push Ups</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="ul-filter">
+                    <li>Dominadas
+                        <ul class="pulls-dropdown">
+                            <li>Australian Pull ups</li>
+                            <li>Pull ups</li>
+                            <li>Chest to bar</li>
+                            <li>Muscle up</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="ul-filter">
+                    <li>Fondos
+                        <ul class="pulls-dropdown">
+                            <li>Bar Dips</li>
+                            <li>L-Sit Bar Dips</li>
+                            <li>Dips</li>
+                            <li>Ring Dips</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="workout"> <!--div de los ejercicios a mostrar-->
+                <div class="grid-div-workout">
+                    <div class="workout-img">
+                        <!--aqui se agregará la imagen correspondiente al ejercicio seleccionado-->
+                    </div>
+
+                    <div class="workout-description">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores fuga amet soluta, ipsa est quas voluptatem. Dolor assumenda, harum provident explicabo, facilis nostrum corrupti facere sit laboriosam, neque quam!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!--footer de la página-->
+    <footer>
+        <nav id="footer-nav">
+            <ul class="footer-ul">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Youtube</a> </li>
+                <li><a href="contacto.html">contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <!--Script de javascript al final del body-->
+    <script src="js/variables.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/* valores iniciales de todo*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Imagen de fondo (afecta toda la pagina)*/
+
+body{
+    background-size: cover;
+}
+
+
+/*menu de navegacion*/
+
+#login-button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    margin-left: 50px;
+    width: 85px;
+    height: 85px;
+    background-color: transparent;
+    border: none;
+}
+
+#header-nav {
+    position: relative;
+    width: 100%;
+    min-width: 900px;
+    padding: 6px;
+    display: flex;
+    justify-content : space-between;
+    align-items: center;
+    background-color: #24252A;
+    z-index: 10;
+}
+
+
+.ul-flex-row {
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    position: absolute;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+
+}
+
+li > a:hover {
+    background-color: #004d40;
+}
+
+.ul-dropdown {
+    position: absolute;
+    display: none;
+    transform: translateY(20px);
+}
+
+.ul-dropdown > li {
+    border-bottom: solid 1px #fff;
+    text-align: center;
+    background-color: #757575;
+    padding: 20px;
+    width: 190px;
+    transform: translateX(-20px);
+}
+
+.ul-dropdown > li:hover {
+    background-color: aquamarine;
+}
+
+.QS:hover > .ul-dropdown {
+    display: block;
+}
+
+/*footer*/
+footer {
+    margin-top: 500px;
+}
+#footer-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #24252A;
+}
+
+
+.footer-ul {
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 50px;
+}

@@ -4,7 +4,7 @@
 session_start();
 //get form data and send to mysql database
 //import connection variables
-include_once 'config.php';
+include_once 'config2.php';
 
 // Create connection - OOP
 $conn = new mysqli($servername, $username, $password, $dbname);

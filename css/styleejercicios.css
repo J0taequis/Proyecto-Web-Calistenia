@@ -90,89 +90,90 @@ a {
 
 /*main*/
 
+main {
+    height: 100vh;
+}
+
 
 .main-div { /*Contenedor principal en grid (divide el main en: lista de ejercicios - ejercicio seleccionado )*/
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
 }
 
+/* Lado de los filtros en main*/
 
-/* Lado del formulario en main*/
-
-
-.form-div, #form-general-data { /* div y formulario que ocupa la primera columna (50%) del grid*/
+.filter { /* div que ocupa la primera columna (30%) del grid*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 70px;
     grid-column: 1/2;
 }
 
-#form-general-data >  label, #form-general-data > input, #form-general-data > select { /*globales de ancho y alto*/
-    width: 500px;
-    height: 30px;
+.ul-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+    padding-bottom: 50px; /*evita que los distintas clases de ejercicios se junten*/
 }
 
-#form-general-data > label {
-    padding-top: 10px; 
+.ul-filter  li {
     font-size: 20px;
-}
-
-#submit { /*boton de submit*/
-    background-color: aquamarine;
-}
-
-textarea { /*area del mensaje*/
-    margin-bottom: 10px;
-    width: 500px;
-    height: 300px;
+    list-style: none;
 }
 
 
+/* Lado de los Ejercicios en main */
 
 
-/* Lado de la info  en main*/
-
-
-.text-info-div{ /* div que ocupa la segunda columna (50%) del grid*/
+.workout{ /* div que ocupa la segunda columna (70%) del grid*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-left: 40px;
+    margin-top: 140px;
     grid-column: 2/3;
 }
 
-.grid-text-info { /*div que separa texto de como usar el formulario / datos del usuario respecto del correo ingresado  */
+.grid-div-workout { /* div que guarda la imagen y la descripción del ejercicio*/
     display: grid;
-    grid-template-rows: 250px 250px;
+    grid-template-columns: 400px auto;
 }
 
-.text-div {
-    margin-top: 50px;
-    grid-row: 1/2;
+.workout-img { /*contenedor de la imagen*/
+    width: 400px;
+    height: 400px;
+    grid-column: 1/2;
 }
 
-.text-div > ul > li {
-    padding-top: 30px;
-    font-size: 25px;
-    list-style: square;
+img { /*la imagen dentro del contenedor*/
+    width: 400px;
+    height: 400px;
 }
 
+.workout-description{ /*contenedor de la descripcion*/
+    width: 600px;
+    height: 400px;
+    grid-column: 2/3;
+}
+
+p {
+    max-width: 500px; /*tamaño maximo del parrafo*/
+    padding-left: 30px; /*alejar un poco de la imagen*/
+}
 
 /* Sistema de login y registro */
 
 
-
 /*footer*/
+
 #footer-nav {
     display: flex;
     flex-direction: column;
     background-color: #24252A;
+    width: 100%;
 }
 
 

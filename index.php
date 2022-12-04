@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/styleSession.css">
     <script src="js/datos.js"></script>
-    <title>login</title>
+    <title>XD</title>
 </head>
 <body>
     

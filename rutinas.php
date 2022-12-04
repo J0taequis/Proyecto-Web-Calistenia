@@ -24,8 +24,14 @@ if(!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/stylerutinas.css">
-    <script src="js/crudrutina.js"></script>
+    <!-- Bootstrap - CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome - CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- SweetAlert2 - CSS -->
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styleparques.css">
     <title>Parques de calistenia</title>
 </head>
 <body>
@@ -39,107 +45,73 @@ if(!isset($_SESSION['usuario'])) {
             <ul class="ul-flex-row">
                 <li><a href="inicio.php">Inicio / Home</a></li>
                 <li><a href="rutinas.php">Mis Rutinas</a> </li>
-                <li class="QS"><a href="aboutus.html">Quienes Somos</a></li>
+                <li><a href="ejercicios.html">Ejercicios</a> </li>
+                <li class="QS"><a>Quienes Somos</a>
+                    <ul class="ul-dropdown">
+                        <li><a href="historia.html">Historia</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                    </ul>
+                </li>
                 <li><a href="contacto.html">Contacto</a> </li>
             </ul>
         </nav>
     </header>
 
 
-    <!--Contenido general de la página-->
-    <main>
-        <div class="main-div">
-            <div class="filter"> <!--div de los filtros-->
-                <div class="div-input-filter">
-                    <h2>RUTINA DE EJERCICIOS</h2>
-
-                    <!--Toda la logica correspondiente al crud-->
-
-                    <h3>Agregar Ejercicio</h3>
-                    <!--Agregar ejercicio-->
-                    <div>
-                        <form action="" id="agregar-ejercicio-form"></form>
-                        <div>
-                            <input class="input-crud" name="ejercicio" type="text" form="agregar-ejercicio-form">
-                            <label for="ejercicio">nombre del ejercicio</label>
-                        </div>
-                        <div>
-                            <input class="input-crud" name="cantrepeticiones" type="text" form="agregar-ejercicio-form">
-                            <label for="cantrepeticiones">cantidad repeticiones</label>
-                        </div>
-                        <div>
-                            <input class="input-crud" name="cantseries" type="text" form="agregar-ejercicio-form">
-                            <label for="cantseries">cantidad de series</label>
-                        </div>
-                        <div>
-                            <textarea class="input-crud" name="comentario" id="comentario" form="agregar-ejercicio-form"></textarea>
-                            <label for="comentario">comentario del ejercicio</label>
-                        </div>
-                        <div>
-                            <input type="submit" form="agregar-ejercicio-form" value="agregar">
-                        </div>
-                    </div>
-                    <h3>Eliminar Ejercicio</h3>
-                    <!--eliminar ejercicio-->
-                    <div>
-                        <form action="" id="eliminar-ejercicio-form" method="post"></form>
-                        <div>
-                            <input class="input-crud"  type="text" name="eliminar-ejercicio" form="eliminar-ejercicio-form">
-                            <label for="eliminar-ejercicio">Id del ejercicio a eliminar</label>
-                        </div>
-                        <div>
-                            <input type="submit" form="eliminar-ejercicio-form" value="eliminar">
-                        </div>
-                    </div>
-
-                    <!--Editar ejercicio-->
-                    <h3>Editar Ejercicio</h3>
-                    <div>
-                        <form action="" id="editar-ejercicio-form"></form>
-                        <div>
-                            <input class="input-crud" name="idejercicio" type="text" form="editar-ejercicio-form">
-                            <label for="idejercicio">Id del ejercicio</label>
-                        </div>
-                        <div>
-                            <input class="input-crud" name="ejercicio-editar" type="text" form="editar-ejercicio-form">
-                            <label for="ejercicio-editar">Nombre nuevo</label>
-                        </div>
-                        <div>
-                            <input class="input-crud" name="cantrepeticiones-editar" type="text" form="editar-ejercicio-form">
-                            <label for="cantrepeticiones-editar">Nueva cantidad repeticiones</label>
-                        </div>
-                        <div>
-                            <input class="input-crud" name="cantseries-editar" type="text" form="editar-ejercicio-form">
-                            <label for="cantseries-editar">Nueva cantidad de series</label>
-                        </div>
-                        <div>
-                            <textarea class="input-crud" name="comentario-editar" id="comentario-editar" form="editar-ejercicio-form"></textarea>
-                            <label for="comentario-editar">Nuevo comentario</label>
-                        </div>
-                        <div>
-                            <input type="submit" form="editar-ejercicio-form" value="editar">
-                        </div>
-                    </div>
-
-                    <!--mostrar ejercicios-->
-                    <h3>Mostrar/Recargar Ejercicios</h3>
-                    <div>
-                        <div>
-                            <button id="mostrar-rutina">Mostrar Todo</button>
-                        </div>
-                    </div>
+    <div id="crudApp">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button @click=btnCrear class="btn btn-success" title="Nuevo"><i class="fas fa-plus-circle fa-2xs"></i></button>
                 </div>
+                <!-- <div class="col text-right">
+                    <h5>Cantidad total: <span class="badge bg-success"> {{totalE}} </span></h5>
+                </div> -->
             </div>
-
-            <div class="park"> <!--div de los parques a mostrar-->
-                <div class="grid-div-park"><!--debe haber un div padre para cada publicacion-->
-                    <div class="park-img">
-                        <!--aqui se agregará la imagen correspondiente al parque-->
-                    </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="bg-primary text-light">
+                                <th>ID rutina</th>
+                                <th>Ejercicio</th>
+                                <th>Repeticiones</th>
+                                <th>Series</th>
+                                <th>Comentario</th>
+                                <th>ID usuario</th>
+                                <th>Acciones</th>
+                            </tr>
+                            <tbody>
+                                <tr v-for="(exercise, index) of exercises">
+                                    <td>{{exercise.idrutina}}</td>
+                                    <td>{{exercise.ejercicio}}</td>
+                                    <td>
+                                        <div class="col-md-8">
+                                            <input type="number" v-model.number="exercise.cantrepeticiones" class="form-control text-right" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                    <div class="col-md-8">
+                                            <input type="number" v-model.number="exercise.cantseries" class="form-control text-right" disabled>
+                                        </div>
+                                    </td>
+                                    <td>{{exercise.comentario}}</td>
+                                    <td>{{exercise.idusuario}}</td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-secondary" title="Editar" @click="btnEditar(exercise.idrutina, exercise.ejercicio, exercise.cantrepeticiones, exercise.cantseries, exercise.comentario)"> <i class="fas fa-pencil-alt"></i> </button>
+                                            <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(exercise.idrutina)"> <i class="fas fa-trash-alt"></i> </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+
 
 
     <!--footer de la página-->
@@ -154,8 +126,22 @@ if(!isset($_SESSION['usuario'])) {
         </nav>
     </footer>
 
-
-    <!--Script de javascript al final del body-->
-    <script src="js/variablesrutinas.js"></script>
+    <!-- Vue - JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Axios - JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.js" integrity="sha512-nNH8gXanGmEPnnK9/yhI3ETaIrujVVJ7dstiVIwMtcfbcj1zzTlnH5whbsYhg6ihg5mFe1xNkPPLwCwwvSAUdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- SweetAlert2 - JS -->
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.2/dist/sweetalert2.all.min.js"></script> -->
+    <!-- Jquery - JS -->
+    <script src="jquery/jquery-3.6.1.min.js"></script>
+    <!-- Popper - JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap - JS --> 
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Script - JS -->
+    <script src="js/script1.js"></script>
+    <!-- Fontawesome - JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

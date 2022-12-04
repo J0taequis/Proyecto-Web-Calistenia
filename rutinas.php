@@ -31,7 +31,7 @@ if(!isset($_SESSION['usuario'])) {
     <!-- SweetAlert2 - CSS -->
     <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/styleparques.css">
+    <link rel="stylesheet" type="text/css" href="css/stylerutinas.css">
     <title>Parques de calistenia</title>
 </head>
 <body>
@@ -45,13 +45,7 @@ if(!isset($_SESSION['usuario'])) {
             <ul class="ul-flex-row">
                 <li><a href="inicio.php">Inicio / Home</a></li>
                 <li><a href="rutinas.php">Mis Rutinas</a> </li>
-                <li><a href="ejercicios.html">Ejercicios</a> </li>
-                <li class="QS"><a>Quienes Somos</a>
-                    <ul class="ul-dropdown">
-                        <li><a href="historia.html">Historia</a></li>
-                        <li><a href="equipo.html">Equipo</a></li>
-                    </ul>
-                </li>
+                <li class="QS"><a href="aboutus.html" >Quienes Somos</a></li>
                 <li><a href="contacto.html">Contacto</a> </li>
             </ul>
         </nav>

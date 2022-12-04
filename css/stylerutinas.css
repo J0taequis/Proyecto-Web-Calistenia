@@ -11,11 +11,6 @@ body{
     background-size: cover;
 }
 
-/* Centro de la página (main) */
-
-main {
-    height: 100vh;
-}
 
 /*menu de navegacion*/
 
@@ -57,48 +52,22 @@ a {
     color: #fff;
 }
 
-#header-nav  li {
+li {
     list-style: none;
     cursor: pointer;
     padding: 20px;
     transition: all 0.3s ease 0s;
+
 }
 
-#header-nav li > a:hover {
+li > a:hover {
     background-color: #004d40;
 }
 
-.ul-dropdown {
-    position: absolute;
-    display: none;
-    transform: translateY(20px);
-}
-
-.ul-dropdown > li {
-    border-bottom: solid 1px #fff;
-    text-align: center;
-    background-color: #757575;
-    padding: 20px;
-    width: 190px;
-    transform: translateX(-20px);
-}
-
-.ul-dropdown > li:hover {
-    background-color: aquamarine;
-}
-
-.QS:hover > .ul-dropdown {
-    display: block;
-}
-
-
-/* Sistema de login y registro */
-
-
-
-
 /*footer*/
-
+footer {
+    margin-top: 500px;
+}
 #footer-nav {
     display: flex;
     flex-direction: column;
@@ -113,16 +82,4 @@ a {
     justify-content: flex-end;
     align-items: flex-end;
     margin-right: 50px;
-}
-
-.footer-ul > li {
-    list-style: none;
-    cursor: pointer;
-    padding: 20px;
-    transition: all 0.3s ease 0s;
-}
-
-
-.footer-ul li:hover {
-    background-color: #004d40;
 }

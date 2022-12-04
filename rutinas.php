@@ -24,7 +24,7 @@ if(!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/styleparques.css">
+    <link rel="stylesheet" type="text/css" href="./css/stylerutinas.css">
     <script src="js/crudrutina.js"></script>
     <title>Parques de calistenia</title>
 </head>
@@ -39,13 +39,7 @@ if(!isset($_SESSION['usuario'])) {
             <ul class="ul-flex-row">
                 <li><a href="inicio.php">Inicio / Home</a></li>
                 <li><a href="rutinas.php">Mis Rutinas</a> </li>
-                <li><a href="ejercicios.html">Ejercicios</a> </li>
-                <li class="QS"><a>Quienes Somos</a>
-                    <ul class="ul-dropdown">
-                        <li><a href="historia.html">Historia</a></li>
-                        <li><a href="equipo.html">Equipo</a></li>
-                    </ul>
-                </li>
+                <li class="QS"><a href="aboutus.html">Quienes Somos</a></li>
                 <li><a href="contacto.html">Contacto</a> </li>
             </ul>
         </nav>

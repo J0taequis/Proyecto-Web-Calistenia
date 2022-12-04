@@ -69,29 +69,6 @@ a {
     background-color: #004d40;
 }
 
-.ul-dropdown {
-    position: absolute;
-    display: none;
-    transform: translateY(20px);
-}
-
-.ul-dropdown > li {
-    border-bottom: solid 1px #fff;
-    text-align: center;
-    background-color: #757575;
-    padding: 20px;
-    width: 190px;
-    transform: translateX(-20px);
-}
-
-.ul-dropdown > li:hover {
-    background-color: aquamarine;
-}
-
-.QS:hover > .ul-dropdown {
-    display: block;
-}
-
 
 /* Sistema de login y registro */
 

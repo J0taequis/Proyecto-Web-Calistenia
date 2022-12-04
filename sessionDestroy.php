@@ -2,6 +2,6 @@
 
     session_start();
     session_destroy();
-    header("location: inicio.php");
+    header("location: index.php");
 
 ?>

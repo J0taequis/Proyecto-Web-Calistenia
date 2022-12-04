@@ -33,7 +33,7 @@ if(mysqli_num_rows($validar_login) > 0) {
     echo '
         <script>
             alert("El usuario o contraseña no existe, por favor verifique lo datos introducidos");
-            window.location = "index.php";
+            window.location = "inicio.php";
         </script>
     ';
     exit();

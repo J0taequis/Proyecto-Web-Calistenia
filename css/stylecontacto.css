@@ -3,40 +3,33 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-/* Imagen de fondo (afecta toda la pagina)*/
-
-body{
-    background-size: cover;
-}
-
-
-/*menu de navegacion*/
+/* ------------------- menu de navegacion ------------------- */
 
 #login-button {
+    padding: 10px 22px;
     cursor: pointer;
+    background-color:black;
     color: #fff;
+    border: 0;
     outline: none;
     margin-left: 50px;
-    width: 85px;
-    height: 85px;
-    background-color: transparent;
-    border: none;
 }
 
-#header-nav {
+nav {
     position: relative;
     width: 100%;
     min-width: 900px;
-    padding: 6px;
+    padding: 30px 0;
     display: flex;
     justify-content : space-between;
     align-items: center;
     background-color: #24252A;
     z-index: 10;
 }
-
 
 .ul-flex-row {
     right: 0;
@@ -52,39 +45,41 @@ a {
     color: #fff;
 }
 
-#header-nav  li {
+li {
     list-style: none;
     cursor: pointer;
     padding: 20px;
     transition: all 0.3s ease 0s;
+
 }
 
-#header-nav li > a:hover {
+li > a:hover {
     background-color: #004d40;
 }
 
-.ul-dropdown {
-    position: absolute;
-    display: none;
-    transform: translateY(20px);
+/* ------------------- GRID CONTACTOS ------------------- */
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
 }
 
-.ul-dropdown > li {
-    border-bottom: solid 1px #fff;
-    text-align: center;
-    background-color: #757575;
-    padding: 20px;
-    width: 190px;
-    transform: translateX(-20px);
+header {
+    grid-area: header;
 }
 
-.ul-dropdown > li:hover {
-    background-color: aquamarine;
+main {
+    grid-area: main;
 }
 
-.QS:hover > .ul-dropdown {
-    display: block;
+footer {
+    grid-area: footer;
 }
+
 
 
 
@@ -163,36 +158,13 @@ textarea { /*area del mensaje*/
     list-style: square;
 }
 
-
-/* Sistema de login y registro */
-
-
-
-/*footer*/
-#footer-nav {
-    display: flex;
-    flex-direction: column;
-    background-color: #24252A;
-}
-
+/* ------------------- Footer ------------------- */
 
 .footer-ul {
     right: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     margin-right: 50px;
-}
-
-.footer-ul > li {
-    list-style: none;
-    cursor: pointer;
-    padding: 20px;
-    transition: all 0.3s ease 0s;
-}
-
-
-.footer-ul li:hover {
-    background-color: #004d40;
+    position: absolute;
 }

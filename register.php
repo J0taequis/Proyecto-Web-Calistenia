@@ -31,7 +31,7 @@ if(mysqli_num_rows($verificar_email) > 0) {
     echo '
         <script>
             alert("Este correo ya está registrado. intentalo de nuevo");
-            window.location = "index.php";
+            window.location = "inicio.php";
         </script>
         ';
     exit();
@@ -41,7 +41,7 @@ if(mysqli_num_rows($verificar_usuario) > 0) {
     echo '
         <script>
             alert("Este usuario ya está registrado. intentalo de nuevo");
-            window.location = "index.php";
+            window.location = "inicio.php";
         </script>
         ';
     exit();

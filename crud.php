@@ -46,7 +46,7 @@ switch ($opcion) {
         break;
 }
 
-print json_encode($data, JSON_UNESCAPED_UNICODE);
-$conexion = NULL;
+print json_encode($data, JSON_UNESCAPED_UNICODE); //Enviamos el array final dependiendo del caso, (caso de actualizar o crear) en formato json al javascript
+$conexion = NULL; //Cerrar conexión
 
 //$conexion->close();

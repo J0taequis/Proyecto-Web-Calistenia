@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuario'])) {
     
     <script>
         alert("Por favor debes iniciar sesión");
-        window.location = "index.php";
+        window.location = "inicio.php";
     </script>
     
     ';
@@ -43,7 +43,7 @@ if(!isset($_SESSION['usuario'])) {
         <nav id="header-nav">
             <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
             <ul class="ul-flex-row">
-                <li><a href="inicio.php">Inicio / Home</a></li>
+                <li><a href="index.php">Inicio / Home</a></li>
                 <li><a href="rutinas.php">Mis Rutinas</a> </li>
                 <li class="QS"><a href="aboutus.html" >Quienes Somos</a></li>
                 <li><a href="contacto.html">Contacto</a> </li>
@@ -51,6 +51,7 @@ if(!isset($_SESSION['usuario'])) {
         </nav>
     </header>
 
+    <main>
 
     <div id="crudApp">
         <div class="container">
@@ -106,19 +107,20 @@ if(!isset($_SESSION['usuario'])) {
         </div>
     </div>
 
-
+    </main>
 
     <!--footer de la página-->
     <footer>
-        <nav id="footer-nav">
+        <nav>
             <ul class="footer-ul">
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Youtube</a></li>
-                <li><a href="contacto.html">contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </footer>
+
 
     <!-- Vue - JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -134,7 +136,7 @@ if(!isset($_SESSION['usuario'])) {
     <!-- Bootstrap - JS --> 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Script - JS -->
-    <script src="js/script1.js"></script>
+    <script src="js/crud.js"></script>
     <!-- Fontawesome - JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>

@@ -1,112 +1,65 @@
+<?php
+    session_start();
+    if(isset($_SESSION['usuario'])) {
+        header("location: index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="NOINDEX">
-    <meta name="description" content="Proyecto Desarrollo Web Hecho por Sion Arancibia y Eduardo Jaramillo">
-    <link rel="stylesheet" type="text/css" href="./css/styleindex.css">
+    <link rel="stylesheet" type="text/css" href="./css/styleSession.css">
     <script src="js/datos.js"></script>
-    <title>Proyecto de calistenia</title>
+    <title>Login</title>
 </head>
-
-
 <body>
+    
 
-    <!--Barra de navegación-->
-
-    <header>
-        <nav>
-            <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
-            <ul class="ul-flex-row">
-                <li><a href="inicio.php">Inicio / Home</a></li>
-                <li><a href="rutinas.php">Mis Rutinas</a> </li>
-                <li class="QS"><a href="aboutus.html" >Quienes Somos</a></li>
-                <li><a href="contacto.html">Contacto</a> </li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <!--Contenido general de la página-->
     <main>
-        <article class="article-content" aria-label="article">
-            <section class="banner">
-                <div class="banner-content">
-                    <h2>Bienvenidos al mundo de la calistenia</h2>
-                    <a href="#">Ver artículos</a>
+        <div class="container">
+
+            <div class="back__box">
+
+                <div class="back__box-login">
+                    <h3>¿No tienes cuenta?</h3>
+                    <p>Inicia sesión para entrar a la página</p>
+                    <button id="btn__log-in">Iniciar sesión</button>
                 </div>
-            </section>
-            <section class="section-3">
-                <div class="card-container">
-                    <div class="card">
-                        <figure>
-                            <img src="imgs/calistenia1.1.png" alt="">
-                        </figure>
-                        <div class="content-card">
-                            <h3>Front Lever</h3>
-                            <p>
-                                El front lever es un ejercicio de calistenia y gimnasia deportiva que se realiza en las
-                                barras y anillas manteniendo el cuerpo paralelo al suelo y completamente horizontal
-                                desde la cabeza pasando por cadera y rodillas hasta los tobillos.
-                            </p>
-                            <a href="#">Leer más</a>
-                        </div>
-                    </div>
+
+                <div class="back__box-register">
+                    <h3>¿Aún no tienes cuenta?</h3>
+                    <p>Registrate aquí</p>
+                    <button id="btn__sign-in">Registrarse</button>
                 </div>
-                <div class="card-container">
-                    <div class="card">
-                        <figure>
-                            <img src="imgs/calistenia1.2.jpeg" alt="">
-                        </figure>
-                        <div class="content-card">
-                            <h3>Muscle-up</h3>
-                            <p>
-                                El muscle-up es un ejercicio de entrenamiento de fuerza avanzado, dentro del dominio de
-                                la calistenia. Es una rutina combinada de un pull-up radial seguido de un dip. Existen
-                                variaciones tanto para los anillos como para la barra.
-                            </p>
-                            <a href="#">Leer más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <figure>
-                            <img src="imgs/calistenia1.3.jpg" alt="">
-                        </figure>
-                        <div class="content-card">
-                            <h3>Full planche</h3>
-                            <p>
-                                El ejercicio Full Planche, es un movimiento calisténico, el cual consiste en sostener tu
-                                cuerpo en una posición paralela al suelo haciendo uso de la fuerza de tus manos y brazos
-                                al mismo tiempo, para que el resto de tu cuerpo se mantenga en equilibrio.
-                            </p>
-                            <a href="#">Leer más</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </article>
+
+            </div>
+
+            <div class="container__login-register">
+
+                <form action="login.php" id="form__login" class="form__login" method="post">
+                    <h2>Iniciar sesión</h2>
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Contraseña">
+                    <button>Iniciar sesión</button>
+                </form>
+
+                <form id="form__register" class="form__register" method="post">
+                    <h2>Registrarse</h2>
+                    <input type="text" name="name" placeholder="Nombre de usuario">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Contraseña">
+                    <button type="submit">Registrarse</button>
+                </form>
+
+            </div>
+
+        </div>
     </main>
 
+    <script src="js/script.js"></script>
+    <script src="js/variables.js"></script>
 
-    <!--footer de la página-->
-    <footer>
-        <nav>
-            <ul class="footer-ul">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </footer>
-
-
-    <!--Script de javascript al final del body-->
 </body>
-
 </html>

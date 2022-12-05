@@ -47,7 +47,7 @@ var crudApp = new Vue({
                     });
                     Toast.fire({
                         type: 'success',
-                        title: '¡Producto Agregado!'
+                        title: '¡Ejercicio Agregado!'
                     })                
                 }
 
@@ -56,7 +56,7 @@ var crudApp = new Vue({
         btnBorrar: function(idrutina) {
 
         Swal.fire({
-            title: '¿Está seguro de borrar el registro: '+idrutina+" ?",         
+            title: '¿Está seguro de borrar el registro?',         
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor:'#d33',

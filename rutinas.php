@@ -44,7 +44,7 @@ if(!isset($_SESSION['usuario'])) {
             <a id="login-button" href = "sessionDestroy.php">Cerrar sesión</a>
             <ul class="ul-flex-row">
                 <li><a href="index.php">Inicio / Home</a></li>
-                <li><a href="rutinas.php">Mis Rutinas</a> </li>
+                <li><a href="rutinas.php">Mi Rutina</a> </li>
                 <li class="QS"><a href="aboutus.html" >Quienes Somos</a></li>
                 <li><a href="contacto.html">Contacto</a> </li>
             </ul>

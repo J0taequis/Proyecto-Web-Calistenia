@@ -68,7 +68,6 @@ if(!isset($_SESSION['usuario'])) {
                     <table class="table table-striped">
                         <thead>
                             <tr class="bg-primary text-light">
-                                <th>ID rutina</th>
                                 <th>Ejercicio</th>
                                 <th>Repeticiones</th>
                                 <th>Series</th>
@@ -78,7 +77,6 @@ if(!isset($_SESSION['usuario'])) {
                             </tr>
                             <tbody>
                                 <tr v-for="(exercise, index) of exercises">
-                                    <td>{{exercise.idrutina}}</td>
                                     <td>{{exercise.ejercicio}}</td>
                                     <td>
                                         <div class="col-md-8">

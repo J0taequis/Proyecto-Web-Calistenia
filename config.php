@@ -1,10 +1,10 @@
 <?php
     class Conexion{
         public static function Conectar(){
-            define('severname', 'localhost');
-            define('dbname', 'calistenia');
-            define('username', 'root');
-            define('password', '');	
+            define('severname', 'db.inf.uct.cl');
+            define('dbname', 'A2022_sarancibia');
+            define('username', 'A2022_sarancibia');
+            define('password', 'A2022_sarancibia');	
             $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');			
             try{
                 $conexion = new PDO("mysql:host=".severname."; dbname=".dbname, username, password, $opciones);
@@ -15,10 +15,10 @@
         }
     }
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "calistenia";
+    $servername = "db.inf.uct.cl";
+    $username = "A2022_sarancibia";
+    $password = "A2022_sarancibia";
+    $dbname = "A2022_sarancibia";
 
 
 ?>

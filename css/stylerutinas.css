@@ -30,6 +30,8 @@ main {
 
 footer {
     grid-area: footer;
+    position: relative;
+    margin-top: 300px;
 }
 
 #crudApp {

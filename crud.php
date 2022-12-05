@@ -21,7 +21,7 @@ $iduser = $_SESSION['idlogueado'];
 switch ($opcion) {
     case 1:
         //Leer
-        $consulta = "SELECT idrutina, ejercicio, cantrepeticiones, cantseries, comentario, idusuario FROM rutina WHERE Idusuario = '$iduser'";
+        $consulta = "SELECT Idrutina, ejercicio, cantrepeticiones, cantseries, comentario, Idusuario FROM rutina WHERE Idusuario = '$iduser'";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -34,13 +34,13 @@ switch ($opcion) {
         break;
     case 3:
         //Actualizar
-        $consulta = "UPDATE rutina SET ejercicio = '$ejercicio', cantrepeticiones = '$cantrepeticiones', cantseries = '$cantseries', comentario = '$comentario' WHERE (idrutina = '$idrutina') AND (Idusuario = '$iduser')";
+        $consulta = "UPDATE rutina SET ejercicio = '$ejercicio', cantrepeticiones = '$cantrepeticiones', cantseries = '$cantseries', comentario = '$comentario' WHERE (Idrutina = '$idrutina') AND (Idusuario = '$iduser')";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         break;
     case 4:
-        $consulta = "DELETE FROM rutina WHERE (idrutina='$idrutina') AND (Idusuario='$iduser') ";
+        $consulta = "DELETE FROM rutina WHERE (Idrutina='$idrutina') AND (Idusuario='$iduser') ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         break;

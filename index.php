@@ -36,11 +36,11 @@
             <section class="banner">
                 <div class="banner-content">
                     <h2>Bienvenidos al mundo de la calistenia</h2>
-                    <a href="#">Ver artículos</a>
+                    <a href="#card-container">Ver artículos</a>
                 </div>
             </section>
             <section class="section-exercises">
-                <div class="card-container">
+                <div id="card-container">
                     <div class="card">
                         <figure>
                             <img src="imgs/calistenia1.1.png" alt="">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container">
+                <div id="card-container">
                     <div class="card">
                         <figure>
                             <img src="imgs/calistenia1.2.jpeg" alt="">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-container">
+                <div id="card-container">
                     <div class="card">
                         <figure>
                             <img src="imgs/calistenia1.3.jpg" alt="">

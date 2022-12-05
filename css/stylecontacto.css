@@ -40,12 +40,12 @@ nav {
     position: absolute;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: #fff;
 }
 
-li {
+nav li {
     list-style: none;
     cursor: pointer;
     padding: 20px;
@@ -53,7 +53,7 @@ li {
 
 }
 
-li > a:hover {
+nav li > a:hover {
     background-color: #004d40;
 }
 
@@ -80,20 +80,14 @@ footer {
     grid-area: footer;
 }
 
-
-
-
-/*main*/
-
+/* -------------- main-div ------------- */
 
 .main-div { /*Contenedor principal en grid (divide el main en: lista de ejercicios - ejercicio seleccionado )*/
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-
 /* Lado del formulario en main*/
-
 
 .form-div, #form-general-data { /* div y formulario que ocupa la primera columna (50%) del grid*/
     display: flex;
@@ -125,11 +119,7 @@ textarea { /*area del mensaje*/
     height: 300px;
 }
 
-
-
-
 /* Lado de la info  en main*/
-
 
 .text-info-div{ /* div que ocupa la segunda columna (50%) del grid*/
     display: flex;

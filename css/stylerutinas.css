@@ -16,6 +16,7 @@ body {
     "main"
     "footer";
     height: 100vh;
+    background: linear-gradient(to right, rgba(5, 4, 86, 0.7), rgba(6, 68, 122, 0.7));
 }
 
 header {
@@ -29,6 +30,14 @@ main {
 
 footer {
     grid-area: footer;
+}
+
+#crudApp {
+    margin-top: 50px;
+}
+
+#title-rutina {
+    margin-top: 20px;
 }
 
 
@@ -65,12 +74,12 @@ nav {
     position: absolute;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: #fff;
 }
 
-li {
+nav li {
     list-style: none;
     cursor: pointer;
     padding: 20px;
@@ -78,7 +87,7 @@ li {
 
 }
 
-li > a:hover {
+nav li > a:hover {
     background-color: #004d40;
 }
 

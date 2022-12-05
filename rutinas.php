@@ -52,60 +52,60 @@ if(!isset($_SESSION['usuario'])) {
     </header>
 
     <main>
+        <div id="title-rutina">
+            <h2 class="text-center text-dark"> <span class="badge bg-warning">MIS RUTINAS</span></h2>
+        </div>
 
-    <div id="crudApp">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <button @click=btnCrear class="btn btn-success" title="Nuevo"><i class="fas fa-plus-circle fa-2xs"></i></button>
+        <div id="crudApp">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <button @click=btnCrear class="btn btn-success" title="Nuevo"><i class="fas fa-plus-circle fa-2xs"></i></button>
+                    </div>
                 </div>
-                <!-- <div class="col text-right">
-                    <h5>Cantidad total: <span class="badge bg-success"> {{totalE}} </span></h5>
-                </div> -->
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr class="bg-primary text-light">
-                                <th>ID rutina</th>
-                                <th>Ejercicio</th>
-                                <th>Repeticiones</th>
-                                <th>Series</th>
-                                <th>Comentario</th>
-                                <th>ID usuario</th>
-                                <th>Acciones</th>
-                            </tr>
-                            <tbody>
-                                <tr v-for="(exercise, index) of exercises">
-                                    <td>{{exercise.idrutina}}</td>
-                                    <td>{{exercise.ejercicio}}</td>
-                                    <td>
-                                        <div class="col-md-8">
-                                            <input type="number" v-model.number="exercise.cantrepeticiones" class="form-control text-right" disabled>
-                                        </div>
-                                    </td>
-                                    <td>
-                                    <div class="col-md-8">
-                                            <input type="number" v-model.number="exercise.cantseries" class="form-control text-right" disabled>
-                                        </div>
-                                    </td>
-                                    <td>{{exercise.comentario}}</td>
-                                    <td>{{exercise.idusuario}}</td>
-                                    <td>
-                                        <div class="btn-group" role="group">
-                                            <button class="btn btn-secondary" title="Editar" @click="btnEditar(exercise.idrutina, exercise.ejercicio, exercise.cantrepeticiones, exercise.cantseries, exercise.comentario)"> <i class="fas fa-pencil-alt"></i> </button>
-                                            <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(exercise.idrutina)"> <i class="fas fa-trash-alt"></i> </button>
-                                        </div>
-                                    </td>
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="bg-primary text-light">
+                                    <th>ID rutina</th>
+                                    <th>Ejercicio</th>
+                                    <th>Repeticiones</th>
+                                    <th>Series</th>
+                                    <th>Comentario</th>
+                                    <th>ID usuario</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            </tbody>
-                        </thead>
-                    </table>
+                                <tbody>
+                                    <tr v-for="(exercise, index) of exercises">
+                                        <td>{{exercise.idrutina}}</td>
+                                        <td>{{exercise.ejercicio}}</td>
+                                        <td>
+                                            <div class="col-md-8">
+                                                <input type="number" v-model.number="exercise.cantrepeticiones" class="form-control text-right" disabled>
+                                            </div>
+                                        </td>
+                                        <td>
+                                        <div class="col-md-8">
+                                                <input type="number" v-model.number="exercise.cantseries" class="form-control text-right" disabled>
+                                            </div>
+                                        </td>
+                                        <td>{{exercise.comentario}}</td>
+                                        <td>{{exercise.idusuario}}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button class="btn btn-secondary" title="Editar" @click="btnEditar(exercise.idrutina, exercise.ejercicio, exercise.cantrepeticiones, exercise.cantseries, exercise.comentario)"> <i class="fas fa-pencil-alt"></i> </button>
+                                                <button class="btn btn-danger" title="Eliminar" @click="btnBorrar(exercise.idrutina)"> <i class="fas fa-trash-alt"></i> </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </main>
 

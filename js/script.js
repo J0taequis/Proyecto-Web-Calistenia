@@ -1,4 +1,4 @@
-
+/* SISTEMA DELOGIN Y REGISTRO RESPOSIVE */
 document.getElementById("btn__sign-in").addEventListener("click", register);
 document.getElementById("btn__log-in").addEventListener("click", login);
 window.addEventListener("resize", widhtPage);

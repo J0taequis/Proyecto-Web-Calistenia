@@ -66,6 +66,7 @@ body {
     "main"
     "footer";
     height: 100vh;
+    background: linear-gradient(to right, rgba(5, 4, 86, 0.7), rgba(6, 68, 122, 0.7));
 }
 
 header {
@@ -78,6 +79,10 @@ main {
 
 footer {
     grid-area: footer;
+}
+
+.fa-instagram, .fa-facebook, .fa-youtube {
+    color: #fff;
 }
 
 /* -------------- main-div ------------- */

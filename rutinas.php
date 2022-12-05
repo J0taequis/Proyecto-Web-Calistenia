@@ -113,14 +113,13 @@ if(!isset($_SESSION['usuario'])) {
     <footer>
         <nav>
             <ul class="footer-ul">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li> <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a></li>
+                <li> <i class="fa-brands fa-facebook"></i> <a href="#">Facebook</a></li>
+                <li> <i class="fa-brands fa-youtube"></i> <a href="#">Youtube</a></li>
+                <li><a href="contacto.html">Contacto</a> </li> 
             </ul>
         </nav>
     </footer>
-
 
     <!-- Vue - JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

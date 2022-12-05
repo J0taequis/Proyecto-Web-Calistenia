@@ -32,6 +32,10 @@ footer {
     grid-area: footer;
 }
 
+.fa-instagram, .fa-facebook, .fa-youtube {
+    color: #fff;
+}
+
 /* ------------------- menu de navegacion ------------------- */
 
 #login-button {

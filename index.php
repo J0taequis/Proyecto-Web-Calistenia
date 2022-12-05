@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="NOINDEX">
     <meta name="description" content="Proyecto Desarrollo Web Hecho por Sion Arancibia y Eduardo Jaramillo">
+    <!-- Fontawesome - CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="./css/styleindex.css">
     <script src="js/datos.js"></script>
     <title>Proyecto de calistenia</title>
@@ -97,14 +99,13 @@
     <footer>
         <nav>
             <ul class="footer-ul">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
+                <li> <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a></li>
+                <li> <i class="fa-brands fa-facebook"></i> <a href="#">Facebook</a></li>
+                <li> <i class="fa-brands fa-youtube"></i> <a href="#">Youtube</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </footer>
-
 
     <!--Script de javascript al final del body-->
 </body>
